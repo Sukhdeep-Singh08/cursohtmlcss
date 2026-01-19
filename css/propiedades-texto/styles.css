@@ -5,9 +5,13 @@ p{
     font-weight: bolder; /*Si ponemos Bold = 700, si ponemos bolder lo hace mas grueso un escalon mas (De lo maximo que se pueda de cada tipografia*/
     font-style: oblique; /*Italic = Muy inclinada, Oblique = Medio inclinado y normal es normal*/ /*Hay una funcion de poner con un espacio despues de oblique o italic los grados que quieres ponerle al texto.*/
     text-align: justify; /*Alinea nuestro texto como a la izquierda (start = tambien se puede poner es lo mismo que izquierda), derecha (end =") ,centro y justify (para que el texto quede iguald e tamaño y se lea mejor como en Word)*/
-    text-decoration:line-through; /*Decoración del texto: Underline(Subraya el texto),overline(subrayar por arriba en vez de abajo),line-through(Tacha el texto)*/
+    text-decoration:none; /*Decoración del texto: Underline(Subraya el texto),overline(subrayar por arriba en vez de abajo),line-through(Tacha el texto)*/
+    line-height: 1.3; /*El tamaño entre lineas o distancia que hay entre linea a linea*/
+    letter-spacing: 1px; /*Espaciado entre letras*/
 }
 
-h1{
-    text-align: center;
+
+span{
+    text-decoration: line-through;
+    color: brown;
 }
