@@ -7,7 +7,8 @@ p{
     text-align: justify; /*Alinea nuestro texto como a la izquierda (start = tambien se puede poner es lo mismo que izquierda), derecha (end =") ,centro y justify (para que el texto quede iguald e tamaño y se lea mejor como en Word)*/
     text-decoration:none; /*Decoración del texto: Underline(Subraya el texto),overline(subrayar por arriba en vez de abajo),line-through(Tacha el texto)*/
     line-height: 1.3; /*El tamaño entre lineas o distancia que hay entre linea a linea*/
-    letter-spacing: 1px; /*Espaciado entre letras*/
+    letter-spacing: 1px; /*Espaciado entre letras = Se utiliza o se puede utilizar en botones*/
+    text-transform: capitalize; /*Uppercase para poner todo mayusculas, lowercase para poner todo minuscula, capitalize que pone la primera letra de cada palabra en mayuscula*/ 
 }
 
 
