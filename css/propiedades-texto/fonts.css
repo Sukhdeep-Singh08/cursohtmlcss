@@ -1,8 +1,10 @@
+/* Para configurar tu tipografia en vez de poner el codigo en el head y tener diferentes weights dependiendo de cual eligas */
+
 @font-face { /*Para poner fondos apartir de zip o enlaces*/
     font-family: "Dalto"; /*Aqui pondremos un nombre cualquiera para la fuente*/
-    src: url(fonts-montserrat/Montserrat-Regular.ttf) format(truetype); /*Ponemos en enlace donde etsa la carpeta q acabamos de extraer con todas las fuentes*/
+    src: url(fonts-montserrat/Montserrat-ExtraLight.ttf) format(truetype); /*Ponemos en enlace donde etsa la carpeta q acabamos de extraer con todas las fuentes*/
     /* Si tiene un formato el src, el navegador web cargara mas rapido la fuente */
-    font-weight: 400;
+    font-weight: 100;
     /* Si ponemos font-weight le añadimos que esta fuente o el tipo de fuente se aplique cuando pongamos el numero 400 por ejemplo */
 }
 /* TTF = truetype */
