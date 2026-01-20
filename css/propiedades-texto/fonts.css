@@ -1,0 +1,26 @@
+@font-face { /*Para poner fondos apartir de zip o enlaces*/
+    font-family: "Dalto"; /*Aqui pondremos un nombre cualquiera para la fuente*/
+    src: url(fonts-montserrat/Montserrat-Regular.ttf) format(truetype); /*Ponemos en enlace donde etsa la carpeta q acabamos de extraer con todas las fuentes*/
+    /* Si tiene un formato el src, el navegador web cargara mas rapido la fuente */
+    font-weight: 400;
+    /* Si ponemos font-weight le añadimos que esta fuente o el tipo de fuente se aplique cuando pongamos el numero 400 por ejemplo */
+}
+/* TTF = truetype */
+/* Podemos tener varias versiones */
+@font-face {
+    font-family: "Dalto";
+    src: url(fonts-montserrat/Montserrat-Bold.ttf) format(truetype);
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "Dalto";
+    src: url(fonts-montserrat/Montserrat-ExtraBold.ttf) format(truetype);
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: "Dalto";
+    src: url(fonts-montserrat/Montserrat-Black.ttf) format(truetype);
+    font-weight: 900;
+}
