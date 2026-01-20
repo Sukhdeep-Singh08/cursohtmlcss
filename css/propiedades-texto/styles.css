@@ -1,6 +1,7 @@
 p{
     color: red;
-    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+    /* Esto para despues de linear la fuente externa si pones el nombre ya lo tendrias */
+    font-family: montserrat;
     font-size: 13px;
     font-weight: bolder; /*Si ponemos Bold = 700, si ponemos bolder lo hace mas grueso un escalon mas (De lo maximo que se pueda de cada tipografia*/
     font-style: oblique; /*Italic = Muy inclinada, Oblique = Medio inclinado y normal es normal*/ /*Hay una funcion de poner con un espacio despues de oblique o italic los grados que quieres ponerle al texto.*/
