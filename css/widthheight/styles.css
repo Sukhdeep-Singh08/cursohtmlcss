@@ -1,0 +1,13 @@
+div{
+    background: red;
+    width: 300px; /*Para modificar el ancho*/
+    height: 100px; /*Para modificar la altura*/
+}
+
+input{
+    width: 80%;
+}
+
+form{
+    width: 300px;
+}
