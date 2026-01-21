@@ -1,0 +1,14 @@
+.formulario{ /*Utilizamos el selector de classe para referernios a la etiqueta formulario y no a todas las etiquetas form*/
+    background: red;
+    padding: 10px; /*Asi escrito es una abreviación para poner padding por todos lados porque podriamos poner padding-top, padding-bottom y asi con todos.*/
+    padding: 10px 2px; /*En esta abreviación podemos poner primero el padding vertical y despues el horizontal*/
+    /* Como he dicho anteriormente para poner padding especificando para que lado queremos poner el relleno */
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.formulario_input{
+    padding: 10px; /*El padding es un relleno que hay interior de un elemento como el espacio interior dentro de una cajita*/
+}
