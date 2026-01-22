@@ -1,0 +1,33 @@
+body{
+    background: black; /*Fondo negro por parte de¡l body*/
+    font-family: sans-serif; /*Con una famila de fuente sans-serif*/
+    color: white; /*Color de¡l texto blanco*/
+}
+
+.card{
+    background: coral; /*Div con la classe card con fondo coral*/
+    text-align: center; /*Alinear al centro los textos*/
+    width: 300px; /*Un Ancho de 300px*/
+}
+
+h1{
+    padding-top: 10px; /*Ponemos un padding-top al h1 al titulo principal*/
+    font-size: 22px; /*Un tamaño de 22px al h1*/
+    margin: 0; /*Un margin para q no haya separación*/
+}
+
+h2{
+    font-size: 13px; /*Camnbiamos el tamaño del subtitulo*/
+    font-weight: 100; /*Para que el texto este mas finito*/
+    letter-spacing: 2px; /*Espacio entre letras de 2 pixels para que se vea mejor el h2*/
+    text-transform: uppercase; /*Poner en Mayusculas*/
+}
+
+p{
+    font-size: 9px; /*Tamaño pequeño entre los elementos de texto de 11px para q se diferencia de los demas*/
+    padding: 20px;
+    background: lightcoral; 
+    text-align: justify; /*para que se vea el texto igual de una banda a la otra*/
+}
+
+/* Acabamos de crear una tarjeta de presentación utilizando lo que hemos aprendido */
