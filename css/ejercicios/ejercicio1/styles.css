@@ -8,6 +8,7 @@ body{
     background: coral; /*Div con la classe card con fondo coral*/
     text-align: center; /*Alinear al centro los textos*/
     width: 300px; /*Un Ancho de 300px*/
+    margin: auto; /*Para que se centre*/
 }
 
 h1{
