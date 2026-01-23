@@ -1,14 +1,26 @@
+body{
+    margin: 0;
+    /* Para que no haya el margen puesto automaticamente del navegador */
+}
+
 .box{
     width: 100px;
     height: 100px;
     background: red;
     /* Ponemos una caja de 100x100 para que sea un cuadrado y que se vea con un fondo rojo */
+    margin: 10px;
+    /* Para separar entre las dos cajas */
 }
 
 .box-default{
-
+    padding: 25px;
+    border: 10px solid black;
+    /* Sigue creciendo con el padding y el borde y no tiene el tamaño de 100x100 respecto al segundo cuadro = box-sizing: content-box; */
 }
 
 .box-new{
-    
+    box-sizing: border-box;
+    padding: 25px;
+    border: 10px solid black;
+    /* Si le das las mismas medidas el padding y el border forman parte dentro del tamañod e 100x100 */
 }
