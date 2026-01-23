@@ -1,3 +1,8 @@
+body{
+    background: black; /*Ponemos un fondo negro en toda la pantalla*/
+}
+
+
 div{
     background: red;
     width: 200px;
@@ -12,4 +17,22 @@ div{
         padding: 0;
     } 
     /* Aparte de los bordes podemos hacer border-top y en las otras direccionas solo para bordear en la dirección que nosotros asignemos */
+}
+
+/* Si ponemos border=none se quita los bordes por ejemplo en un input que viene predeterminado un border */
+
+input{
+    margin: 5px;
+    padding: 6px 9px;
+    /* Margin y padding cons eparación yu que se vea mejor */
+    border: none;
+    /* Quitmaos bordes */
+    border-bottom: 1px solid greenyellow;
+    border-radius: 5px;
+    border-left: 1px solid greenyellow;
+    /* Y le ponemos un border-top y left para que se vea apartir de¡l fondo negro */
+    background: transparent;
+    /* Con un fondo transparente q no se vea */
+
+    /* Y hacemos que haya como un efecto */
 }
