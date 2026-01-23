@@ -1,0 +1,14 @@
+.box{
+    width: 100px;
+    height: 100px;
+    background: red;
+    /* Ponemos una caja de 100x100 para que sea un cuadrado y que se vea con un fondo rojo */
+}
+
+.box-default{
+
+}
+
+.box-new{
+    
+}
