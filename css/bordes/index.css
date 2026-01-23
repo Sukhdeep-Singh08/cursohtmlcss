@@ -4,10 +4,12 @@ div{
     margin: auto;
     text-align: center;
     /* Fondo rojo con una anchura de 200px, un margen auto para que se centre y el texto alineado en el centro que en este caso es Hola */
-    border: 3px solid black; /*Donde ponemos el width,style y color del border en una misma linea en vez de poner las 3. Aunque border-radius va separada y sirve para redondear*/
-    border-radius: 4px;
+    border: 3px solid rgb(111, 0, 255); /*Donde ponemos el width,style y color del border en una misma linea en vez de poner las 3. Aunque border-radius va separada y sirve para redondear*/
+    border-radius: 0px 0px 36px 36px;
+    /*border-bottom-right-radius: 10px; Podemos asignlare un radio a cada lado, pero se puede simplificar que es como lo he hecho arriba que va como las agujas de¡l reloj*/ 
     p{
         margin: 0;
         padding: 0;
-    }
+    } 
+    /* Aparte de los bordes podemos hacer border-top y en las otras direccionas solo para bordear en la dirección que nosotros asignemos */
 }
