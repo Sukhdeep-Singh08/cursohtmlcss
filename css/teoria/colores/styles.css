@@ -1,0 +1,10 @@
+.box{
+    width: 100px; 
+    height: 100px;
+    background: #f00;
+    margin: 20px;
+    /* Hacemos un cuadrado con un 100x100 fondo de color rojo y un margen entre todos los elementos y este */
+}
+
+/* RGB = RED , GREEN AND BLUE es la primera opción y despues tenemos el hexadecimal que es el que mas se utiliza.*/
+/* Los colores hexadecimales normalmente son 6 digitos pero tambien se pueden poner en 3 haciendo como si uno fuesen 2  */
