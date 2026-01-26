@@ -1,12 +1,58 @@
+body{
+    margin: 0;
+}
+
 div{
     background: #ededed;
     padding: 20px;
     font-family: sans-serif;
     border-left: 2px solid #999;
     /* Un fondo al div y un padding para que se separe */
+    width: 60vw;
+    height: 60vh;
+    box-sizing: border-box;
+    margin: auto;
+    margin-top: 20vh;
 } 
 
 h1{
     margin: 0; /*Para quitarle el margen al h1 */
+    font-size: 23px;
 }
 
+span{
+    color: #999;
+    font-size: 16px;
+    font-weight: 100;
+    /* Un color con su tamaño y un peso menor al del h1 */
+}
+
+p{
+    color: #555;
+}
+
+/* UNIDADES ABSOLUTAS (IDEAL Y SER PRECISO) */
+
+/* PX = Emite una luz en la pantalla que se utiliza para el ancho y alto de las imagenes, tipografia, se utiliza mucho para los margenes y paddings */
+
+/* Estan los PT y PC pero son medidas que no se utilizan */
+
+/* (FISICAS)CM,MM,IN= Se utiliza en la vida real donde tiene un significado o que se vayan a aplicar en la vida real, por ejemplo: El diseño de un banner que se va a imprimir, la portada que vamos a pegar en un mural o maquetar interfaces tacticas  basicamente aquellas cosas que van a ser impresas o utilizadas fisicamente. */
+
+/* UNIDADES RELATIVAS (UNA UNIDAD QUE DEPENDE DE OTRO VALOR */
+
+/* Porcentaje=  Respecto a su contenedor se divide al porcentaje que pongas dependiendo del tamañó donde este su contenedor o padre.No se utilizan en font-size, ni en margenes ni paddings, pero se utiliza para un width si quieres tener el 50%.*/
+
+/*EM = valdra lo mismo que el font-size del elemento padre, es decir que agarra el font-size del padre y lo multiplica*/
+
+/* REM = Lo mismo que em pero va a buscar en la raiz(Etiqueta HTML) si no hay etiqueta html con font-size lo determina el navegador que son 16px.*/
+
+/* vh(viewportheight) / vw(Viewportwidth) = Son unidades que cambian dependiendo del viewport de la pantalla*/
+
+/* Cuando el height es mas grande vmax= 1vh i vmin = vw, si el width es mas grande vmax= 1vw i vmin= 1vh */
+/* EX= Se utiliza en el lineheight de las tipografias */
+
+/* CU·ANDO UTILIZARLO */
+
+/* PRECISO ,RESOLUCiÓN EXACTA, BORDES =PX */
+/* FONT-SIZE = EM */
