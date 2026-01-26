@@ -1,0 +1,12 @@
+div{
+    background: #ededed;
+    padding: 20px;
+    font-family: sans-serif;
+    border-left: 2px solid #999;
+    /* Un fondo al div y un padding para que se separe */
+} 
+
+h1{
+    margin: 0; /*Para quitarle el margen al h1 */
+}
+
