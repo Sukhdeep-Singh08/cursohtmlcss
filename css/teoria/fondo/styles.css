@@ -1,0 +1,14 @@
+body{
+    background-color: #0f0;
+}
+
+.box{
+    width: 200px;
+    height: 200px;
+    margin: 20px;
+    background: #f3a8;
+    background-size: cover;
+    /* Existe el Cover i contain. El cover cubre toda la imagen i contain lo contiene e intenta que no se repita la imagen mas de una vez */
+    background-position: center; /*Para poner posición a una imagen si es en el centro, izquierda o derecha*/
+    background-repeat: no-repeat; /*Por si quieres que no se reptia o se repita la imagen*/
+}
