@@ -11,4 +11,5 @@ body{
     /* Existe el Cover i contain. El cover cubre toda la imagen i contain lo contiene e intenta que no se repita la imagen mas de una vez */
     background-position: center; /*Para poner posición a una imagen si es en el centro, izquierda o derecha*/
     background-repeat: no-repeat; /*Por si quieres que no se reptia o se repita la imagen*/
+    /* Pero se puede utilizar solamente background: url, position, size, attachment i el color que asi seria su orden Entre el position y size se pone una barra */
 }
