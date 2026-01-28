@@ -8,4 +8,24 @@ body{
     margin: auto;
     background-color: #e2e2e2;
     margin-top: 50px;
+    box-shadow: 0px 0px 40px 0px #0009;
+    /* El primer numero es en dirección horizontal, el segundo en vertical, el tercero en difuminación y el cuarto en tamaño*/
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+h2{
+    color: #444;
+    font-family: sans-serif;
+}
+
+p{
+    line-height: 1.5;
+    text-shadow: 0px 0px 2px #f00; 
+    /* Para poner sombra a los textos */
+}
+
+img{
+    filter: drop-shadow(0px 0px 3px #000);
+    /* Esto es para poner filtros a imagenes que si ponemos la sombra noirmal con box-shadow queda mal a si que ponemos un filtro */
 }
