@@ -1,15 +1,21 @@
 body{
-    background: black; /*Fondo negro por parte de¡l body*/
+    background: #fff; /*Fondo negro por parte de¡l body*/
     font-family: sans-serif; /*Con una famila de fuente sans-serif*/
     color: white; /*Color de¡l texto blanco*/
+    margin: 0;
 }
 
 .card{
-    background: coral; /*Div con la classe card con fondo coral*/
+    background: rgb(168, 90, 62); /*Div con la classe card con fondo coral*/
     text-align: center; /*Alinear al centro los textos*/
     width: 300px; /*Un Ancho de 300px*/
     margin: auto; /*Para que se centre*/
+    margin-top: 50px;
     box-sizing: border-box;
+    padding: 20px 10px;
+    /* Ponemos un margen que separa del top i un padding para que se agradne */
+    box-shadow: 0px 0px 25px #0008; /*Una sombrita a la carta*/
+    border-radius: 8px;
 }
 
 .card_title{
@@ -23,13 +29,16 @@ body{
     font-weight: 100; /*Para que el texto este mas finito*/
     letter-spacing: 2px; /*Espacio entre letras de 2 pixels para que se vea mejor el h2*/
     text-transform: uppercase; /*Poner en Mayusculas*/
+    margin: 0;/*Quitamos margin*/
+    margin-top: 5px;
 }
 
 .card_content{
     font-size: 9px; /*Tamaño pequeño entre los elementos de texto de 11px para q se diferencia de los demas*/
-    padding: 20px;
-    background: lightcoral; 
+    padding: 10px 20px;
+    padding-bottom: 0;
     text-align: justify; /*para que se vea el texto igual de una banda a la otra*/
+    margin-bottom: 0;
 }
 
 .card_img{
