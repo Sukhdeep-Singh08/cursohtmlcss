@@ -2,6 +2,7 @@ body{
     margin: 0;
     background: #222;
     color: #eee;
+    background: linear-gradient(to bottom, #333, #000);
 }
 
 h2{
