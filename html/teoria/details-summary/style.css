@@ -1,0 +1,30 @@
+body{
+    background-color: #333;
+    color: #ddd; 
+    font-family: sans-serif;
+}
+
+details{
+    background-color: transparent;
+    border: 1px solid #ddd;
+    color: #eee;
+    padding: 9px;
+    font-size: 0.8em;
+}
+
+details[open]{
+    border: 1px solid #ddd;
+    font-weight: bold;
+}
+
+/* Para seleccionar cuando esta abierto */
+
+summary{
+    background-color: transparent;
+    font-size: 1em;
+    color: #eee;
+}
+
+ul{
+    font-weight: 100 ;
+}
