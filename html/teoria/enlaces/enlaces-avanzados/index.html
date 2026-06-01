@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form action="">
+        <h2>Formulario de Contacto</h2>
+        <fieldset>
+            <legend>INFORMACiÓN BÁSICA</legend>
+            <div class="form_input">
+                <label for="nombre">Nombre</label>
+                <input type="text" placeholder="John Doe" id="nombre">
+                <!-- para poder enlazar el label con el input, al input debemos crearle una idea y ponerle el mismo nombre de la id creada ene l for del label -->
+                <!-- Esto lo que hace es cuando le damos al label, pues nos llevara al input. -->
+            </div>
+            <div class="form_input">
+                <label>Mail
+                    <input type="email" name="email" placeholder="ejemplo@gmail.com">
+                </label>
+                <!-- Otra manera si no se quiere poner el for y el id, es poniendo el input dentro del label. -->
+            </div>
+            <div class="form_input">
+                <label>Asunto
+                    <input type="email" name="email" placeholder="Asunto de tu mensaje">
+                </label>
+                <!-- Otra manera si no se quiere poner el for y el id, es poniendo el input dentro del label. -->
+            </div>                
+        </fieldset> 
+        <div class="form_input"></div>
+            <label for="">Tipo de usuario 
+                <select name="type-of-user" id="">
+                    <option value="user1">Seguidor/a</option>
+                    <option value="user2">Empresa</option>
+                    <option value="user3">Otros</option>
+                    <!-- El atributo value es importante aunque ese valor no lo ve el usuario,que se utiliza para JavaScript o al servidor. -->
+                </select>
+            </label>
+        </div>
+        <div class="form_input">
+            <label for="">Referente
+                <input type="text" list="referente">
+                <datalist  id="referente" name="type-of-user" id="">
+                    <option>Yo</option>
+                    <option>Amigo</option>
+                    <option>Otros</option>
+                    <!-- El atributo value es importante aunque ese valor no lo ve el usuario,que se utiliza para JavaScript o al servidor. -->
+                </datalist>
+            </label>
+        </div>
+        <div class="form_input">
+            <label for="mensaje">Mensaje</label>
+            <textarea name="" id="mensaje" maxlength="140" rows="" placeholder="deja tu mensaje...."></textarea>
+            <!-- El atributo maxlength: lo que nos permite es decir cuantos caracteres queremos que el textarea tenga -->
+        </div>
+        <div class="form_input">
+            <label>Acepto los <a href="terms.html" target="_blank">terminos y condiciones</a>
+                <input type="checkbox" name="" id="" class="checkbox">
+            </label>
+        </div>
+    </form>
+</body>
+</html>
