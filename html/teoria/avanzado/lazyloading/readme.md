@@ -1,0 +1,1 @@
+Una Lazy Loading lo que hace es que mientras vas llegando a la sección se va cargando la información/imagenes que el usuario observa.
