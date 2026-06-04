@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- La accesibilidad web es hacer ppaginas webs accesibles para todos.Mejor accessibilidad = más buscadores. El objetivo es ofrecer objetivos igualitarias para todos sin depender de la descapacidades de cada uno. -->
+    <!-- DOM = Es un arbol que contiene todas las etiquetas de HTML -->
+
+    <!-- Para la accessiblidad el DOM se duplica y lo envia a una aplicación para accesibilidad y despues lo muestra la pàgina -->
+    <img src="Captura de pantalla 2026-06-04 122424.png" alt="Img gràfico sobre la explicación DOM entre usuarios sin discapacidad y con.">
+    <a href="index.html" aria-label="Ir a la pagina web principal">ir al menu</a>
+    <!-- Para las imagenes es alt, pero para enlaces en este caso tenemos que utilizal aria-label ya que alt ni title funcionarian en este caso. -->
+    <nav>
+        <ul>
+            <li>asdads</li>
+            <li>asdads</li>
+            <li>asdads</li>
+            <li>asdads</li>
+        </ul>
+    </nav>
+    <h1 aria-label="Titulo principal">
+        Titulo
+    </h1>
+    <!-- Poder ver toda la pàgina y hacer lo que podamos hacer como rellenar un formulario,etc es decir para accedir con la tecla tab y el enter. -->
+    <div id="slider" role="slider" aria-valuenow="3" arial-valuemin="1" arial-valuemax="10" >
+        <img src="Captura de pantalla 2026-06-04 122424.png" alt="">
+    </div>
+    <!-- Ponemos un rol para poner aquestas etiquetas que no tienen una etiqueta como h1, puedes poner el rol de header pero si tienes la etiquea h1 no te hace falta. En este caso sldier es un role que no tiene etiqueta para demostrardse y podemos ver todos los roles en MDN WEBS -->
+</body>
+</html>
