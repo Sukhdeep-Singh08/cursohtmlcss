@@ -1,0 +1,39 @@
+/* [SELECTOR POR ATRIBUTO] */
+
+img[src="hola.jpg"]{
+}
+/* Estoy seleccionando a todas las imagenes que tengan el atributo src="hola.jpg" */
+
+img[src$="png"]{
+
+}
+/* Estamos seleccionando lo mismo que antes, pero el $ lo que hace es que puede empezar el atributo con algo pero acabara con png que es lo que hemos puesto en este caso.  Acaba con ($)*/
+
+img[src^="hola"]{
+}
+
+/* Aqui en este caso con ^ p0uede empezar con hola pero puede acabar como quiera. Arranca con (^) 
+----------------------------------------------------
+*/
+
+/* [SELECTOR POR HIJO DIRECTO] */
+
+/* ul li{
+    color: red;
+} */
+
+/* ul strong{
+    color: red;
+} */
+
+/* ul > strong{ Si ponemos > ahora solo si strong es hijo directo de ul se pondra rojo.
+    color: red;
+}*/
+
+li > em{
+    color: red;
+}
+
+/* Estamos dando color solo a los li que pertenecen dentro de una ul. Ahora si lo cambiamos al strong solo pondremos el strong que este dentro de una ul. Strong no es hijo directo de ul si no de li, el hijo directo de ul es li. 
+------------------------------------------------------
+*/
