@@ -19,15 +19,17 @@ img[src^="hola"]{
 ----------------------------------------------------------------------------------------------------------
 */
 
-/* [SELECTOR POR HIJO DIRECTO] */
-
-/* ul li{
-    color: red;
-}
+/* [SELECCION DESCENDIENTE]
 
 ul strong{
     color: red;
+} 
+*/
+ul li{
+    color: #666;
 }
+
+/* [SELECTOR POR HIJO DIRECTO] 
 
 ul > strong{ Si ponemos > ahora solo si strong es hijo directo de ul se pondra rojo.
     color: red;
@@ -38,5 +40,19 @@ li > em{
 }
 
 /* Estamos dando color solo a los li que pertenecen dentro de una ul. Ahora si lo cambiamos al strong solo pondremos el strong que este dentro de una ul. Strong no es hijo directo de ul si no de li, el hijo directo de ul es li. 
------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------*/
+
+/* [SELECTOR POR ADYACENTE] 
+
+Quiero seleccionar el elemento que esta a continuación mia, no el que esta dentro ni por fuera sinó el proximo hermano.
+
 */
+
+h1 + p{
+    color: blue; /*Color Azul que se pone al parrafo*/
+}
+
+/* Porque estoy dando estilo al <p> que va despues de un h1, es decir esta clase solo funcionara si la etiqueta <p> va despues de un <h1>.*/
+
+/* [SELECTOR DE HERMANOS GENERALES */
+
