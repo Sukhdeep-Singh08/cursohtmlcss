@@ -52,7 +52,19 @@ h1 + p{
     color: blue; /*Color Azul que se pone al parrafo*/
 }
 
-/* Porque estoy dando estilo al <p> que va despues de un h1, es decir esta clase solo funcionara si la etiqueta <p> va despues de un <h1>.*/
+/* Porque estoy dando estilo al <p> que va despues de un h1, es decir esta clase solo funcionara si la etiqueta <p> va despues de un <h1>. (Solos e lo da al primer p que va despues de un h1)*/
 
-/* [SELECTOR DE HERMANOS GENERALES */
+/* h1 + p + p{
+    color: blue; 
+}  En este seleccionamos al segundo pq pq buscamos el <p> que va despues de un <h1> y de otro <p>.*/
 
+/* [SELECTOR DE HERMANOS GENERALES 
+
+Seleccionar el elemento que esta a continuación mia y no solo el primero si no todos los que haya.
+*/
+
+h1 ~ p {
+    color: blue;
+}
+
+/* En comparación con el + este pone color azul todos los elementos que van despues de un h1 hay una p y no solo el primero. Sin importar que  venga en un segundo p,tercero ,etc. */
