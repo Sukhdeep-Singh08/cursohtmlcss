@@ -1,0 +1,15 @@
+#titulo{
+    color: green
+}
+
+.titulo{
+    color: red;
+}
+
+h1{
+    color: blue !important;
+}
+
+/* SI PONEMOS UNA CLASE PUES HAY UNA ESPECIFIDAD  MAYOR Y SE LE PONE EL COLOR DE LA CLASE. l'id es mas especifico que la clase.Pero si se lo damos en linea el estilo con la etiqueta style pues tiene mas especificidad.*/ 
+
+/* !important, es una regla que olvida los otros metodos de la cascada y lo pone de prioridad para primero. */
