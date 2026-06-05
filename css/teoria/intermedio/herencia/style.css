@@ -1,0 +1,21 @@
+body{
+    color:blue;
+}
+
+div{
+    color: brown;
+    font-family: sans-serif;
+}
+
+h1{
+    color: revert; 
+    /* 
+    · Lo que hace color inherit es ponerse un color que tiene su padre es decir que hereda un color, buscando un padre que tenga un color en este caso. 
+    · Si ponemos el valor de initial pues no hereda y simplementa agarra el valor por defecto/inicial que tenia. 
+    · Unset lo que hace es si el valor por defecto era inherit lo vuelve inherit pero si era otro lo deja en initial.
+    · Revert es como unset, pero lo que hace es encontrar el estilo usuario y lo revierse y si no pues no lo revierte. Como si te instalas una extensión y lo revierte apartir de esa extension.
+    
+    [NO SE UTILIZAN, SOLO EL TEXT AREA/INPUTS/<a> CON EUL INHERIT YA Q VENIA CON UN FONT-FAMILY DIFERENTE] 
+    */ 
+    font-family: initial;
+}
