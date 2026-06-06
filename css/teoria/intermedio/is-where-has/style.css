@@ -1,0 +1,11 @@
+section .elemento1,
+section .elemento2,
+section .elemento3{
+    color: red;
+}
+/* Esto para seleccionarlo sin ninguna pseudo-clase */
+
+section :is(.elemento1, .elemento2, .elemento3) {
+    color: blue;
+}
+    /* :is lo que hace es agrupar las 3 clases de section.Si todas las clases estan dentro de algo que es igual es is pues lo agrupa para que no tengas q poner section todas las veces en este caso.*/
