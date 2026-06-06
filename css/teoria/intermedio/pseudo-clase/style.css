@@ -1,0 +1,126 @@
+/*
+:root{
+}
+ :root es una pseudo-clase que se pone asi sin q tenga nada delante.Selecciona el elemento raiz. por ejemplo si pongo color: #999 todos adquiriran el color gris ya que seria de raiz. */
+
+h1{
+    color: #48e;
+    font-family: sans-serif;
+    margin: 30px;
+}
+/* Lo que nos permite hacer las pseudo-clases es seleccionar un estado especifico de un elemento, palabras claves que nos permite acceder un estado de un elemento. Si yo pongo ese elemento puedo modiuficar el elemento cuando esta esta en ese estado. */
+
+/* CUANDO PASAMOS EL MOUSE POR ENCIMA DE H1 */
+
+h1:hover{
+    color: #000;
+    background: #ccc;
+}
+    /* Pseudo-clase mas común de todas, ya que seleccionamos el <h1> cuando este el mouse encima.*/
+
+/* MIENTRAS SE ESTÉ CLICKEANDO H1 */
+h1:active{
+    background: #999;
+    color: #fff;
+}
+    /* Active lo que hace es definir el color del elemento cuando hacemos click. */
+
+/* SELECCIONANDO EL PRIMER LI */
+
+li:first-child{
+    color: #f00;
+}
+    /* :first-child pues selecciona al primer hijo directo de cualquier tipo de etiqueta. En este caso estamos diciendo que css mire todos los li y el primero le pongo color rojo.Aparte tiene mas especifidad */
+
+/* SELECCIONANDO AL SEGUNDO LI */
+
+li:nth-child(2){
+    color: #0f0;
+}
+    /* Con pseudo-clases solo podemos seleccionar el primero y el ultimo.Pero si ponemos :nth-child(2) seleccionamos el segundo elemento. Podmeos cambiar el numero dentro del parentesis para elegir cualquier elemento.Utilizamos :nth-child cuando no es el primer ni ultimo elemento pq para eso ya tenemos las otras pseudo-clases. */
+
+
+/* SELECCIONANDO UN LIU SI Y UN LI NO */
+
+li:nth-child(3n){
+    color: #ff0;
+    background-color: #000;
+}
+
+    /* Si dentro del parentesis del :nth-child() pondemos 1n = se seleccionan todos, pero si ponemos 2n = Se selecciona uno pero el otro no es decir, si no si no.... Es decir el numero que hay delante es el espacio o los elementos q selecciona y el n es q selecciona o de esa selección vamos a pintar a uno. */
+
+/* SELECCIONANDO EL SEGUNDO LI */
+
+li:nth-of-type(2){
+    color: #0ff;
+}
+    /* Hemos puesto un span, pero como css solo lo mira de todos los li. Si pusieramos :nth-child(2) como hay un elemento que interfiere (q no es un li) no se lo pondria al siguiente li y para eso deberiamos poner (3) por eso el type pq determina el tipo de elemento.*/
+
+/* SELECCIONANDO EL ÚLTIMO LI */
+
+li:last-child{
+    color: #00f;
+}
+    /* Lo mismo que :first-child pero poniendo last. */
+
+/* SELECCIONANDO LO LI DENTRO DE ".LISTA" PERO QUE NO TENGAN LA CLASE "EXCLUIR" */
+
+.lista li:not(.excluir){
+    color: red;
+}
+
+    /* Quiero hacer que uno de estos ignore esto.Con la pseudoclase :not(.elem-4) estamos diciendo que esta regla se la damos a todos los li que no tengan la clase de .elem-4 */
+
+div{
+    border: 2px solid black;
+}
+
+/*SELECCIONANDO EUL DIV EN CASO DE ESTAR VACIO*/
+
+div:empty{
+    border: none;
+}
+    /* Si el div esta vació se ejecutara esta regla pq le hemos puesto la pseudo-clase de :empty.Vacio significa ni con espacios */
+
+/* SELECCIONAR INPUT SI ESTA :checked o no. */
+
+input[type="checkbox"]{
+    margin: 50px;
+}
+
+input[type="checkbox"]:checked{
+    margin:0
+}
+
+    /* Seleccionamos el input con [type=""] poniendo de q tipo es el input. En este caso si esta checkeado con su pseudo-clase :checked pues quitaremos margen. */
+
+/* SELECCIONANDO ENLACES NO VISITADOS */
+
+a:link{
+    color: red;
+}
+
+    /*Los enlaces que aun no has visitado con :link*/
+
+/* SELUECCIONANDO ENLACES VISITADOS */
+
+a:visited{
+    color:green;
+}
+
+    /* Con :visited si visitas el enlace se pone color verde en este caso.*/
+
+
+/* SELECCIONANDO INPUTS INVALIDOS*/
+
+input:invalid{
+    color: red;
+}
+    /* Si el input en este caso de email no es un email se pondra en rojo. */
+
+/* SELECCIONANDO INPUTS VALIDOS */
+
+input:valid{
+    color: green;
+}
+    /* Si el input es un email estara en verde. */
