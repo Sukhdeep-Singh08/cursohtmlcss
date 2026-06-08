@@ -1,0 +1,49 @@
+div{
+    padding: 20px;
+}
+
+/* PARA PODER ACCEDER A LOS PSEUDO-ELEMENTOS DEBEMOS PONER :: */
+
+h1::first-letter{
+    color: red;
+    font-size: 3em;
+    letter-spacing: -8px;
+}
+    /* SELECCIONA LA PRIMERA LETRA */
+
+div:first-line{
+    color: red;
+    font-weight: bold;
+}
+
+    /* PARA MODIFICAR LA PRIMERA LINEA DE UN TEXTO POR EJEMPLO */
+
+div::selection{
+    background-color: red;
+    color: white;
+}
+    /* PARA PODER MODIFICAR A LA HORA DE SELECCIONAR ALGO CON EL CURSOR.DE NORMAL SALDRIA FONDO AZUL Y TEXTO BLANCO. */
+
+input::placeholder{
+    color: green;
+    background-color: #000;
+}
+    /* PARA MODIFICAR EL PLACEHOLDER DEL INPUT */
+
+li::marker{
+    color: red;
+}
+    /* PARA MODIFICAR LOS PUNTOS DEL LISTADO DE ELEMENTOS */
+
+li::before{
+    content: 'Elemento: ';
+    color: red;
+}
+    /* ANTES */
+
+li::after{
+    content: ' Despues';
+    color: blue;
+}
+
+    /* DESPUES */
