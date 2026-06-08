@@ -5,7 +5,28 @@ section .elemento3{
 }
 /* Esto para seleccionarlo sin ninguna pseudo-clase */
 
+/* MODIFICANDO LOS ELEMENTOS 1,2 y 3 que están dentro de algun section */
+
 section :is(.elemento1, .elemento2, .elemento3) {
     color: blue;
 }
     /* :is lo que hace es agrupar las 3 clases de section.Si todas las clases estan dentro de algo que es igual es is pues lo agrupa para que no tengas q poner section todas las veces en este caso.*/
+
+section :where(.elemento1, .elemento2, .elemento3) {
+    color: blue;
+}
+    /* :where hace lo mismo que :is solo que tiene menos especifidad(prioridad). La diferencia que is cambia la especifidad pero :where no.*/
+
+section:has(.elemento1){
+    background: black;
+}
+
+    /* :has si lo ponemos al lado de section ya que pertenece al section y lo que haremos con :has es que tenga algo.En este caso si la etiqueta <section> tenga la clase .elemento 1 le pondremos al section fondo negro. */
+
+
+/* EN CASO DE QUE A UL LE SIGA UN DIV MODIFICAMOS EUL UL*/
+
+ul:has(+div){
+    background-color: black;
+}
+    /* Aqui modificamos el ul si le sigue un div */
