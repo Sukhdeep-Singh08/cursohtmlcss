@@ -1,0 +1,27 @@
+.lista{
+    border: 2px solid #000;
+}
+
+.lista--vieja{
+    opacity: 0.5; 
+    /* CAMBIA LA TRANSPARENCIA */
+    background-color: #ddd;
+}
+
+    /* GENERAR NOMBRE DE ULN BLOQUE */
+.lista__item{
+    color: grey;
+    margin: 10px 0;
+    list-style: square;
+}
+    /* GENERAR NOMBRE DE ULN ELEMENTO PARA SABER DE QUE BLOQUE PROVIENE. */
+
+
+.item--danino{
+    color: red;
+}
+
+.item--importante{
+    color:blue;
+}
+    /* AQUIU CREAMOS DOS CLASES MAS PARA LA PARTE DE LA MODIFICACION, DONDE AHORRAMOS LINEAS Y NO REPETIMOS CODIGO. */
