@@ -1,0 +1,38 @@
+body{
+    margin: 0; /*Quitamos el margen del body*/
+    background-color: #ededed; /*Fondo gris oscuro*/
+    font-family: sans-serif; /*Cambiamos la fuente*/
+}
+
+.contenedor{
+    border: 2px solid #000;
+    margin: 30px 50px;
+    background: #fff;
+    position: relative;
+    /* Si ponemos position relativa, pues hace un punto de referencia para que se mueva dentro de la caja. */
+}
+
+.box{
+    width: 100px; /*Una anchura de 100px y altura*/
+    height: 100px;
+    background: #db7; /*Fondo naranja*/
+    color: #fff; /*Color de texto blanco*/
+}
+
+
+.box--blue{
+    background-color: #48e; /*Fondo de la segunda caja auzl*/
+    position: absolute;
+    /* Se mueve dentro de la caja que tiene como referencia no desde estaba. */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    /* Si ponemos las 4 direcciones 0 y un margin auto, la caja azul en este caso se centro dentro de su punto de referencia de la caja donde tenemos puesto el position relative. SIEMPRE VA A ESTAR CENTRADA */
+}
+
+
+.box--red{
+    background-color: #f64;
+}
