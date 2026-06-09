@@ -1,0 +1,72 @@
+body{
+    margin: 0;
+    font-family: sans-serif;
+}
+
+div{
+    background-color: #999;
+}
+
+/* a{
+    background-color: red;
+    color: #fff;
+    display: block;
+    Convertimos <a> que son elementos en lina a bloque. Ocupa todo el ancho posible si esta en bloque. Aparece uno debajo de¡l otro y comienza una nueva linea. 
+    border: 1px solid #000;
+    margin: 20px;
+    padding: 20px;
+    opacity: 0.6; 
+    Los elementos en linea no funcionan correctamente el margin y el padding, si queremos que funcione pues con display:block pasa de elemento a bloque. 
+}
+*/
+
+/*
+p{
+    background-color: #000;
+    color: #fff;
+    display: inline;
+    margin: 5px;
+     El tamaño se ajusta en el contexto q tiene 
+} */
+
+.nav{
+    background-color: #48e;
+}
+
+.nav__list{
+    margin: 0;
+    text-align: center;
+}
+
+.nav__item{
+    display: inline-block;
+    padding: 10px;
+}
+
+.nav__link:hover{
+    background-color: #59e;
+}
+
+.nav__link{
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px;
+    background-color: #48e;
+}
+
+.link--button{
+    border: 1px solid #fff;
+    background-color: #fff;
+    padding: 4px 18px;
+    color: #48e;
+    border-radius: 8px;;
+    margin-left: 60px;
+    display: none; 
+    /*  Desaparece y no ocupa espacio*/
+}
+
+.link--button:hover{
+    background: transparent;
+    color: #fff;
+}

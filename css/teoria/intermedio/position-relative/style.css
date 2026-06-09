@@ -1,0 +1,32 @@
+body{
+    margin: 0; /*Quitamos el margen del body*/
+    background-color: #ededed; /*Fondo gris oscuro*/
+}
+
+.box{
+    width: 100px; /*Una anchura de 100px y altura*/
+    height: 100px;
+    background: orange; /*Fondo naranja*/
+    color: #fff; /*Color de texto blanco*/
+    position: relative;
+    z-index: 2;
+}
+
+/* Ponemos posicion relativa, el objeto tendra ocupara el mismo lugar como estaba antes pero lo podremos mover libremente de forma q se vea visualmente pero ocupara el mismo sitio como estaba originalmente. */
+
+.box--blue{
+    background-color: blue; /*Fondo de la segunda caja auzl*/
+    left: 20px;
+    top: 20px;
+    /* Top tiene prioridad, delante de bottom. En caso de left y right, left tendra mas prioridad. */
+    z-index: 10;
+}
+
+/* El z-index nos permite mover en este caso las cajas en el eje horizontal (eje z). Si tienen el mismo z-index pues estan igual formadas, una buena tecnica es de dar z-index de 10 a adelante. El z-index solo funciona si tiene posicion en este caso tenemos position:relative por eso funciona. */
+
+.box:first-child{
+    top: 150px;
+    left: 40px;
+    background-color: red;
+    z-index: 20;
+}
