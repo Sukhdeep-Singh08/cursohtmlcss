@@ -1,0 +1,55 @@
+body{
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.box{
+    width: 200px;
+    height: 200px;
+    background-color: #f00;
+    margin: auto;
+    margin-top: 50px;
+    font-size: 50px;
+    text-align: center;
+    font-weight: bold;
+    /* El parametro de transition se pone en la caja, no al hover. */
+    transition-property: color, background-color ;
+        /* Que propiedad queremos ponerle una transición. Si ponemos all todas las propiedades que cambian, cambiaran pero es una mala practica ya que hacemos que el navegador trabeje mas.Lo recomendable es poner aquellas propiedades que van a transicionar.*/
+    transition-duration: 1s;
+        /* Lo que dura la transicion */
+    transition-delay: 1s;
+        /* Cuanto va a tardar para comenzar con la transicion */
+    transition-timing-function: ease;
+}
+
+/* Hay que tener cuidado con los margenes ya que si los valores no son compatibles matematicamente dependiendo que lado se podria liar bastante. */
+
+.box:hover{
+    background-color: rgb(68, 0, 255);
+    color: #fff;
+}
+
+.box__2{
+    width: 120px;
+    height: 120px;
+    background-color: #f00;
+    margin-top: 50px;
+    font-weight: bold;
+    /* transition-property: left;
+    transition-duration: 1s;
+    transition-timing-function: cubic-bezier(.09,1.06,.24,-0.93);  */
+        /* Cubic-bezier es una manera de como hacer transiciones como queremos que acabe fuerte, lento, etc. Podemos utilizar paginas como cubic-bezier o con el mismo F12 podemos ir provando. */
+        /* eASE = viene por defecto */
+        /* ease-in =  Arranca lento y acaba fuerte*/
+        /* ease-in-out = Empieza lento y acaba lento */
+        /* Tambien se pueden hacer curvas */
+    color: red;
+    position: relative;
+    left: 0;
+    /* Podemos poner todas las caracteristicas del transition en una misma propiedad. */
+    transition: left 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+body:hover .box__2{
+    left: 400px;
+}
