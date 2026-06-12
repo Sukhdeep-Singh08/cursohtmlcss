@@ -1,0 +1,33 @@
+body{
+    margin: 0;
+    font-family: sans-serif;
+    height: 100vh;
+    background-color: #ccc;
+}
+
+.box{
+    width: 220px;
+    height: 220px;
+    background-color: #fff;
+    color: red;
+    position: relative;
+    left: 0;
+    border: 2px solid #000;
+    margin: auto;
+    margin-top: 50px;
+    overflow: auto; /*El mejor valor ya que te lo pone automaticamente, si hay mucho te pone el escroll en y y si no hay desbordamiento pues no hay scroll.Como en el textarea.*/
+
+    /* Esto para poder esconder pues el scroll de¡l eje X o Y 
+    overflow-y: hidden;
+    overflow-x: hidden;
+    */
+    overflow-y: scroll; /*Si ponemos solo esto nos saldra en el eje Y unicamente el scroll.El problema es que si no desborda pues seguira viendose el scroll.*/
+        /* Por defecto viene este valor visible overflow.Tenemos otra opcion que es hidden que lo q sobresalga del cuadrado no se ve que es con "hidden" (El problema aqui q se corta texto y no se ve todo).*/
+        /* Si utilizamos "scroll" = Pues no saldra el contenido de la caja y habra uns croll si hay mas texto que la caja. */
+
+    /* overflow: clip;  Este overflow y el hidden tienen el mismo funcionamiento.Solo que Clip no deja espacio y hidden reserva un espacio a las barras de scroll aunque no se vean.*/
+}
+
+/* La caja tiene medidas fijas. A si que si ponemos mucho texto, se sale. */
+
+/* EL OVERFLOW SIRVE PARA TODO TIPO DE ELEMENTOS, PERO DE TEXTO SE U TILIZA MEJOR OTRO. */
