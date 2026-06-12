@@ -1,0 +1,34 @@
+body{
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #bbb;
+}
+
+.box{
+    width: 240px;
+    height: 50px;
+    margin: auto;
+    margin-top: 50px;
+    background-color: #fff;
+    border: 1px solid #0006;
+    white-space: nowrap;
+        /* Define como se comportaran los espacios en blanco y los saltos en linea.[ NORMAL ES EL Q HAY POR DEFECTO ]*/
+            /* nowrap = dice q no habran saltos de linea */
+            /*  Pre = detecta los saltos de linea como esta puesto en el texto del HTML.Basicamente observa como el desarrolador escribio el HTML para ponerlo igual.*/
+            /* pre-wrap =  Funciona igual que el valor pre pero que permite saltos de linea. Es como normal pero lo pone como lo elijo como en pre.*/
+    text-overflow: ellipsis;
+    overflow: hidden;
+    /* Con el whitespace, text-overflow en elipsis i el overflow hidden pues salen los 3 puntos suspensivos. */
+    word-break: break-all; 
+        /* Si hay desbordamiento, te recorta la palabra es decir no sigue ninguna regla y puede ser que tu, pase a t-u. */
+        /* Despues tenemos el valor keep-all q evitar q haya alguna ruptura de palabras como en el idioma coreano. */
+        /* Tenemos tambien auto-phrase detecta cuando una palabra esta por cortar y lo que hace es cortar de forma inteligente. (Sigue en experimental)*/
+    word-wrap: break-word;  /*Se usa overflow-wrap q tienen la misma funcion.*/
+        /* rompe por silabas. Anywhere lo que hace q las palabras largas se desbordan si son largas las palabras(Es decir se rompen si son palabras largas y evitar q se desborden)*/
+}
+
+h1{
+    text-wrap: balance;
+    /* Esto para balancearme el titulo para que se vea de una forma estetica.(Mas para titulso) */
+        /* Despues tenemos pretty: Es hacer que se eviten la viuda o los huervanos (Viuda = Frase o palabra q se queda solo, psaa lo mismo con el huerfano) Lo q hace es balancear y que se vea bien se utiliza mas para el texto. */
+}
