@@ -1,0 +1,21 @@
+body{
+    margin: 0;
+    font-family: sans-serif;
+}
+
+img{
+    width: 400px;
+    height: 200px;
+    border: 2px solid #000;
+    margin-top: 50px;
+    margin-left: 50px;
+    object-fit: cover;
+        /* La propiedad por defecto del object-fit es fill.(no mantiene la relación de aspecto solo q se adapta al tamaño q tu pusiste) */
+        /* El valor contain, es lo mismo que hace bacgrkound contain.Hace que la imagen se repita una vez bien y una de las dimensiones esta al 100%.*/
+        /* El valor cover, se adapta*/
+        /* El valor none = mantiene su relación originakl */
+        /* scale-down = Vamos a quedarnos con el valor mas pequeño de ancho y altura. */
+    object-position: top;
+        /* Para q enseñar de la imagen*/
+            /* Top = Arriba, Bottom = Abajo, Pixeles para cuanto queremos que ver,etc [ES LO MISMO QUE LAS IMAGENES]*/
+}
