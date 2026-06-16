@@ -1,0 +1,38 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.flex{
+    display: flex;
+    /* Al padre del contenedor */
+    /* Flex-flow = flex-wrap + flex-direction */
+    /* flex = basis, grow  */
+    flex-flow: wrap-reverse row-reverse;
+        /* wrap-reverse = va hacia arriba
+        wrap = va hacia abajo
+        row= iz - derecha
+        row-reverse = derecha - iz
+        column = arriba-abajo
+        column-reverse = abajo-arriba */
+    border: 2px solid #000;
+    margin: 20px;
+}
+
+.flex-item{
+    width: 100px;
+    font-size: 40px;
+    background-color: #911;
+    margin: 10px;
+    color: #fff;
+    text-align: center;
+    direction: rtl;
+}
+
+.flex-item:first-child{
+    background-color: #d56;
+}
