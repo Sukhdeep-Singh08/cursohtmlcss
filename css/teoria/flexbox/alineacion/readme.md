@@ -1,0 +1,1 @@
+Flex wrap te permite controlar el comportamiento de los flex-items una vez que el espacio es insuficiente para abarcar todos los elementos.

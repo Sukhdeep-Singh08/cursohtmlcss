@@ -1,0 +1,46 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.flex{
+    display: flex;
+    /* Al padre del contenedor */
+    /* Flex-flow = flex-wrap + flex-direction */
+    /* flex = basis, grow, shrink */
+    flex-flow: wrap-reverse row-reverse;
+        /* wrap-reverse = va hacia arriba
+        wrap = va hacia abajo
+        row= iz - derecha
+        row-reverse = derecha - iz
+        column = arriba-abajo
+        column-reverse = abajo-arriba */
+    border: 2px solid #000;
+    margin: 20px;
+    justify-content: center; 
+        /* Para alinear de forma horizontal. */
+        /* space-evenly, todos tienne el mismo espacio de separación (COMO space-around pero igual 100% y visualmente) */
+    align-items: center; /*para una linea, cuando tenemos mas de una align-content.*/
+        /* stretch ocupa todo el contenido */ 
+        /* baseline se alinea segun la linea base del texto, q se ponga todo centrado o una linea para que se lea bien. */
+    height: 360px;
+}
+
+.flex-item{
+    width: 100px;
+    height: 60px;
+    font-size: 40px;
+    background-color: #911;
+    margin: 10px;
+    color: #fff;
+    text-align: center;
+    direction: rtl;
+}
+
+.flex-item:first-child{
+    background-color: #d56;
+}
