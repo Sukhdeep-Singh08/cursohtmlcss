@@ -1,0 +1,53 @@
+body{
+    margin:0;
+    font-family: sans-serif;
+    background-color: #ccc;
+}
+
+div,body{
+    box-sizing: border-box;
+}
+
+.flex{
+    display: flex;
+    flex-flow: row wrap;
+    border: 2px solid #0009;
+    margin: 20px;
+    height: 100px;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #fff;
+}
+
+.flex-item:first-child{
+    background: #f77;
+    /* flex-grow: 2; */
+        /* Le esta diciendo que el espacio disponible puede ocupar algo.No afecta la alineación pq las cajas cambian, ya que tienen un tamaño definido. TODO EL ESPACIO DISPONIBLE LO VA A OCUPAR */
+    flex-shrink: 3;
+        /* En este caso se encoje mas vecesm basicamente decimos cuanto queremos que se encoja. */
+}
+
+.flex-item{ /*Hijo directo del contenedor*/
+    background-color: #800;
+    color: #fff;
+    font-size: 40px;
+    text-align: center;
+    direction: rtl;
+    /* flex-grow: 1; */
+        /* Cada item de flex sera la mitad del primer hijo. */
+    width: 200px;
+    flex-shrink: 0;
+        /* Hasta donde se van a encoger */
+    flex-basis: 150px;
+        /* El tamaño base, se puede usar min-width que es lo mismo. Sol q con basis se define el tamaño base row = width, column = height.*/
+        /* Lo recomendado es usar un flex-basis: 0 y tambien un min-width de algo. */
+    flex-grow: 1;
+}
+
+.flex-item:last-child{
+    background-color: #000;
+    /* flex-grow: 4; */
+        /* Aqui es el doble del primer hijo y el quadriple del resto. Espació disponible 7. */
+}
+
+/* basis = auto, shrink = 1, grow = 0 es lo q viene de base. Para poder usar las tres en una utilizamos -> flex: grow shrink basis */
