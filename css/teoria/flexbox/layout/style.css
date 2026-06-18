@@ -1,0 +1,68 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0; 
+    /* Quitamos margen a todo el body */
+    font-family: sans-serif; /*Cambiamos la familia a todos los elementos*/
+    background-color: #fff; /*Color parecido al de logo.*/
+    color: #fff; /*Color de texto blanco*/
+}
+
+.header{
+    height: 100svh; /*Ponemos un header que ocupe el 100% de la altura de la pantalla de¡l usuario*/
+    width: 100%;
+    box-sizing: border-box;
+    /* Ponemos una imagen en el fondo del header y para que ocupe todo lo ponemos en el centro y lo cubrimos. */
+    background-image: url(https://st3.depositphotos.com/1003924/33733/i/450/depositphotos_337332438-stock-photo-close-top-view-young-business.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex; /*Para despues centrarlo con el margin*/
+    position: relative;
+}
+
+.header__overlay{
+    height: 100%;
+    width: 100%;
+    /* Ocupe el 100% de toda la pantalla del usuario */
+    background-color: #0006; /*Fondo del filtro negro*/
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+}
+
+.header__item-container{
+    z-index: 10; /*Sobreponemos el item-conainer por encima de¡l filtro.*/
+    position: relative; /*Ponemos una posicion para que haya una especifidad.*/
+    margin: auto; /*Para centrar el texto*/
+    text-align: center; /*Lo alineamos al centro*/
+    max-width: 700px; /*Un tamaño maximo siempre de 700px*/
+    min-width: 200px;
+}
+
+.header__item-container p{
+   text-wrap: pretty;
+}
+
+.header__img{
+    min-width: 100px; /*Minimo 200px*/
+    max-width: 40%; /*No crece mas del 40%*/
+    border-radius: 100%;
+    border: 6px solid #fff;
+    margin: 20px;
+}
+
+h1{
+    margin: 0; /*Sin margen para q no haya un colapso de margenes*/
+    font-size: 3.6rem; /*50px de tamaño*/
+    text-wrap: balance; /*Siempre estara balanceado el texto*/
+}
+
+
+img{
+    max-width: 100%;
+    height: auto;
+}
