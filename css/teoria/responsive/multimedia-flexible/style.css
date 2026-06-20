@@ -1,0 +1,43 @@
+body{
+    margin: 0;
+    font-family: sans-serif;
+}
+
+div, body{
+    box-sizing: border-box;
+}
+
+img{
+    max-width: 100%;
+        /* Aqui si ponemos un max-width a la img, cuandos e lo veamos en una pantalla pequeña se vera grande pero si agrandamos la pantalla no crecera mas de la resolución q la imagen tenga. */
+    height: auto;
+}
+
+/* ESTA ES LA FORMA CORRECTA PARA TRABAJAR CON IMAGENES. */
+
+/* ----- ASI ES COMO SE HACE UN VIDEO FLEXIBLE. */
+
+.container{
+    max-width: 100%;
+    aspect-ratio: 16/9;
+}
+
+video{
+    max-width: 100%; 
+}
+
+/* .container{
+    position: relative;
+    max-width: 100%;
+    padding-top: 56.25%;
+    height: 0;
+}
+
+video{
+    position: absolute;
+    top:0;
+    left: 0;
+    max-width: 100%;} 
+    
+LO QUE SE UISABA ANTES YA No
+    */

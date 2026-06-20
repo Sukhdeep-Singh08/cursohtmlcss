@@ -1,0 +1,37 @@
+body{
+    margin: 0;
+    font-family: sans-serif;
+}
+
+div,body{
+    box-sizing: border-box;
+}
+
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* OTRA MANERA DE CONSTRU&IR UN LAYOUT */
+    max-width: 500px;
+    margin: auto;
+}
+
+.bloque{
+    display: inline-block;
+        /* Con display-inline block no se adapta, pero para crecer por esto utilizamos flexbox. */
+    min-width: 150px;
+    /* max-width: 200px; */
+        /* permitimos que se mueven en un rango, si quitamos el max-width ocupa todo */
+    width: 100%;
+    min-height: 300px;
+        /* El height tiene problemas se desborda, es mejor utilizar min-height */
+    background-color: #7bf;
+    margin: auto;
+    /* Esta es la opción correnta o poner flex: 1 */
+    flex: 1;
+    font-size: 12px;
+    padding: 10px;
+    margin: 4px;
+}
+
+/* PARA PODER HACER QUE EN ESTE CASO CAJAS CREZCAN O SE PONGAN MAS PEQUEÑO PODEMOS PONER UN MAX y UN MIN WIDTH PARA DETERMINAR EUL RANGO EL QUE QUERAMOS Q CREZCA, APARTE DE UN WIDTH 100%. ESTO PARA Q OCU·PE TODA LA PANTALLA, CON FLEX 1 LE DECIMOS QUE LA BASE ES 0 y que crezca HACIENDO Q CON WRAP SI ES MENOS DE 400PX VAYA HACIA ABAJO Y CUANDO ES MAXIMO A 800 Q SE HAGA MAS PEQUEÑO. */
