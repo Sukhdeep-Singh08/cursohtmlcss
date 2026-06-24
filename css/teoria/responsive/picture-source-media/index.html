@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <picture>
+        <source type="image/webp" srcset="hola-small.webp">
+            <!-- Siempre cargara el primer source que pongamos, pero si ponemos media estamos haciendo lo mismo q lo que hicimos en la carpeta de *srcet-sizes*  (PRIMER USO)-->
+            <!-- SI PONEMOS TYPE, nos cargara la imagen si soporta el navegador la qual ponemos y es la q saldra siempre. -->
+        <source media="(max-width:600px)" srcset="hola-medium.png">
+        <img src="hola-png.jpg">
+    </picture>
+        <!-- Todo lo q pongamos dentros seran fuentes, que la etiqueta picture eligira cual enseñar. Dentro utilizaremos la etiqueta source con el atributo srcset. -->
+</body>
+</html>
