@@ -1,0 +1,32 @@
+body{
+    margin: 0;
+    font-family:  sans-serif;
+} 
+
+div,body{
+    box-sizing: border-box;
+}
+
+.flexbox{
+    display: flex;
+}
+
+.flex-item{
+    background-color: #ccc;
+    padding: 30px;
+    border: 1px solid #000;
+    flex:1;
+        /* todo se adapta/ se estira */
+}
+
+/* Vamos a iniciar una Media querie en los dispositivos de impresión */
+@media print{
+}
+
+
+/* Es una expresión, la condición es que tiene q ser una pantalla si o si. Le añadimos el and para combinar diferentes condiciones y ponemos que esta media queria tiene una condicion q se ejecute en pantallas igual a 500px o menor. */
+@media screen and (max-width:500px){
+    .flexbox{
+        flex-direction: column;
+    }
+}
