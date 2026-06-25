@@ -1,24 +1,59 @@
-body{
-    margin: 0;
-    font-family: sans-serif;
-}
-
-div,body{
+*{
     box-sizing: border-box;
 }
 
-.main-navbar{
+body{
+    margin: 0;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.main-wrapper, header, footer{
+    width: 100%;
+}
+
+h1,h2,h3,h4{
+    text-wrap: balance;
+}
+
+p{
+    text-wrap: pretty;
+    text-align: justify;
+}
+
+/*---------------- HEADER */
+
+header{
     background-color: #48e;
+    display: flex;
+    justify-content: end;
+}
+
+.main-navbar{
+    display: flex;
 }
 
 .main-navbar ul{
     display: flex;
     padding: 0;
+    align-items: center;
 }
 
 .main-navbar li{
     list-style: none;
     margin: 4px;
+}
+
+.main-navbar--border{
+    transition: border-bottom 0.2s ease-in-out, padding-top 0.4s ease-in-out;
+}
+
+.main-navbar--border:hover{
+    border-bottom: 1px solid #fff;
+    padding-top: 3px;
 }
 
 .main-navbar a{
@@ -27,6 +62,95 @@ div,body{
     padding: 6px 9px;
 }
 
+.main-navbar--register{
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 5px;
+}
+
+.main-navbar--register a{
+    color: #48e
+}
+
 nav a{
     text-decoration: none;
+}
+
+/*---------------- MAIN SECTION */
+
+.main-wrapper{
+    display: flex;
+    flex-grow: 1;
+    max-width: 1200px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+aside, main{
+    padding: 10px 20px;
+    flex-basis: 0;
+}
+
+main{
+    min-width: 600px;
+}
+
+.main-wrapper aside{
+    flex-grow: 1;
+}
+
+.secondary-navbar{
+    min-width: 10rem;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.secondary-navbar ul{
+    padding: 0;
+}
+
+.secondary-navbar li{
+    list-style: none;
+}
+
+.secondary-navbar a{
+    color: #48e;
+    display: inline-block; /*Para que este en linea y podamos utilizar propiedades en bloque.*/
+    padding: 10px 6px;
+    transition: padding-left 0.3s ease-in-out;
+}
+
+aside:last-child{
+    min-width: 10rem;
+    margin-top: 20px;
+}
+
+.secondary-navbar a:hover{
+    padding-left: 20px;
+}
+
+/* ------- FOOTER */
+
+footer{
+    margin-top: auto;
+    background-color: #333;
+    color: #fff;
+    padding: 40px;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 0 2px 7px #000;
+}
+
+    /* Para hacer q el footer siempre este abajo, modificamos el body poniendole en columna, lo alineamos horizontalmente a start y un tamaño minimo de 100vh q es depeniendo de la pantalla del usuario. Aqui el footer siempre tendra un margin-top auto. */
+
+@media screen and (max-width:800px) {
+    aside:last-child {
+        display: none;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .main-wrapper{
+        flex-direction: column;
+    }
 }
