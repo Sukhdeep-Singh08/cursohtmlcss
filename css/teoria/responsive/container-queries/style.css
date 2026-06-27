@@ -2,3 +2,27 @@ body{
     margin: 0;
     font-family: sans-serif;
 }
+
+.container{
+    container-type: inline-size;
+    /* Definir el tipo del contenedor */
+        /* inline-size = En linea */
+        /* size= En bloque y en linea */
+        /* normal = no es query container */
+    container-name: main;
+    /* Le añadimos un nombre al contenedor */
+}
+
+
+p{
+    font-size: 8px;
+}
+
+@container main (max-width: 600px){
+    p{
+        font-size: 20px;
+        color: #f00;
+        background-color: #000;
+    }
+}
+/* Seleccionamos al contenedor main y las pantallas q tienen igual a 500px o menos pues tendran un tamaño de letra de 20px. */
