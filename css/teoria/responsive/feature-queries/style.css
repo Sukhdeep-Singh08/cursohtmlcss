@@ -3,3 +3,18 @@ body{
     font-family: sans-serif;   
 }
 
+@supports (color: oklch(30% 0.2 30)){
+    body{
+        color: oklch(30% 0.2 30)
+    }
+} /*Si el inavegador soporta este color, seleccionamos al body y ponemos q ponga este color.*/
+
+@supports not (display: grid){
+    body{
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        flex-basis: 0;
+    }
+} 
+/*POR EJEMPLO SI EL NAVEGADOR NO SOPORTA GRID, AL PONER SUPORT NOT DE OTRA MANERA Q NO SEA CON GRID HACEMOS Q NO SE CORROMPA LA PÀGINA WEB SI NO SOPORTASE GRID EN ESTE CASO. */
