@@ -79,11 +79,9 @@ nav a{
 /*---------------- MAIN SECTION */
 
 .main-wrapper{
-    display: flex;
-    flex-grow: 1;
     max-width: 1200px;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: flex;
+    flex-direction: column;
 }
 
 aside, main{
@@ -123,6 +121,7 @@ main{
 aside:last-child{
     min-width: 10rem;
     margin-top: 20px;
+    display: none;
 }
 
 .secondary-navbar a:hover{
@@ -143,14 +142,14 @@ footer{
 
     /* Para hacer q el footer siempre este abajo, modificamos el body poniendole en columna, lo alineamos horizontalmente a start y un tamaño minimo de 100vh q es depeniendo de la pantalla del usuario. Aqui el footer siempre tendra un margin-top auto. */
 
-@media screen and (max-width:800px) {
-    aside:last-child {
-        display: none;
+@media screen and (min-width:480px) {
+    .main-wrapper{
+        flex-direction: row;
     }
 }
 
-@media screen and (max-width:400px) {
-    .main-wrapper{
-        flex-direction: column;
+@media screen and (min-width:800px) {
+    aside:last-child {
+        display: block;
     }
 }
