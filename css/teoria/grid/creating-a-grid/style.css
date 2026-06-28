@@ -1,0 +1,24 @@
+body{
+    margin: 0;
+    font-family: sans-serif;   
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 30% 200px 200px;
+        /* Agregamos columnas, define el width de las columnas. */
+    /* direction: rtl;  */
+        /* Se ordenan a favor del texto ( como se lea ) */
+    grid-template-rows: 100px 200px;
+        /* Agregamos filas con su tamaño de altura de la celda */
+}
+
+.grid-item{
+    background-color: #48e;
+    margin: 10px;
+    padding: 10px;
+    font-size: 30px;
+    color: #fff;
+}
+
+/* Los elementos del GRID ocuparan el 100% por defecto. */
