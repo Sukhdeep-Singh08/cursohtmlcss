@@ -1,0 +1,26 @@
+body{
+    margin: 0;
+    font-family: sans-serif;   
+}
+
+.grid{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: repeat(3,minmax(100px,300px)) 1fr;
+    /* --------------repeat() */
+        /* Lo que hacemoes es con la funcion de repeat primero ponemos cuantas veces, despues el que queremos que se repita. */
+
+    /* ---------------minmax() */
+        /* Ponemos un minimo un maximo para que pueda agrandarse o encojerse hasta un cierto punto. */
+    grid-template-rows: repeat(2,200px) 1fr;
+        /* Si le hemos puesto una altura, pues si pones auto en las filas pues se pondra la altura que hemos definido en el height.Es como un max-width o un min-width pero se lo ponemos a todas las columnas en este caso. */
+}
+
+.grid-item{
+    background-color: #48e;
+    margin: 10px;
+    padding: 10px;
+    font-size: 30px;
+    color: #fff;
+}
+
