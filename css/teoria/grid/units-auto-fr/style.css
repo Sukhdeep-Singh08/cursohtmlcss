@@ -1,0 +1,28 @@
+body{
+    margin: 0;
+    font-family: sans-serif;   
+}
+
+.grid{
+    display: grid;
+    height: 80vh;
+    grid-template-columns: 1fr auto 300px;
+    /* -----------AUTO */
+        /* Si ponemos auto se estira todo lo que puede ocupar.Si por ejemplo al primer hijo ponemos un width el tamaño que se veria se veria reducido, pero el tamaño de celda ocuparia todo el maximo igualmente. (TAMAÑO HIJO =/ TAMAÑO DE CELDA)*/
+
+        /* Se calcula por el contenido de las cajas la propeidad auto.Agarra el min content y el espacio q sobra lo reparte entre los dos. */
+    
+    /* ----------FR */
+        /* En cambio si pongo 1fr tambien pues se estirara o ocupara todo lo posible.Si pongo 1fr por ejemplo a cada uno, pues lo dividira de una manera equitativa sin tener en cuenta el contenido interior. (Aunque te pases tambien se ajustara) */
+    grid-template-rows: 400px auto;
+        /* Si le hemos puesto una altura, pues si pones auto en las filas pues se pondra la altura que hemos definido en el height. */
+}
+
+.grid-item{
+    background-color: #48e;
+    margin: 10px;
+    padding: 10px;
+    font-size: 30px;
+    color: #fff;
+}
+
