@@ -1,0 +1,24 @@
+body{
+    margin: 0;
+    font-family: sans-serif;   
+}
+
+.grid{
+    display: grid;
+    height: 80vh;
+    grid-template-columns: repeat(3,200px);
+    grid-template-rows: repeat(3,200px);
+    grid-auto-rows: 200px;
+        /* Las filas que se creen automaticamente u esos elementos q añadamos pero no estan definidos tendran un tamaño de 200px. */
+    grid-auto-flow: column;
+        /* Aqui decimos que lo que se crea sean columnas, filas , etc.A si q tendriamos q poner un auto-column en vez del rows. */
+}
+
+.grid-item{
+    background-color: #48e;
+    margin: 10px;
+    padding: 10px;
+    font-size: 30px;
+    color: #fff;
+}
+
