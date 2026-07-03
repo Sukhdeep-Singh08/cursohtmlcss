@@ -1,0 +1,38 @@
+body{
+    margin: 0;
+    font-family: sans-serif;   
+}
+
+body, div{
+    box-sizing: border-box;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
+    grid-template-rows: repeat(3,200px);
+    grid-auto-flow: row;
+    margin: auto;
+    padding: 10px;
+    min-height: 100vh;
+    gap: 10px;
+    grid-auto-flow: dense;
+        /* Utilizando esta propiedad, cuando se rompe el layout lo que hace es rellenar los espacios en blanco con otros elementos. */
+}
+
+.grid-item{
+    background-color: #48e;
+    font-size: 30px;
+    color: #fff;
+    border-radius: 16px;
+    background-size: cover;
+    background-position: center;
+}
+
+.grid-item:nth-child(10){
+    grid-column: span 4;
+}
+
+.grid-item:hover{
+    opacity: 0.74;
+}
