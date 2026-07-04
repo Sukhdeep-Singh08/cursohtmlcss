@@ -1,0 +1,53 @@
+body ,div{
+    box-sizing: border-box;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    grid-template-rows: repeat(3,1fr);
+    gap: 10px;
+    padding: 10px;
+    justify-items: stretch; /*Con justify-items movemos los items q hay en el interior de las celdas*/
+        /* Esta es la forma de ordenar en grid:display: 
+            - Por defecto el valor q viene es stretch.
+
+                · self-start= Es como un start, pero este tiene en cuenta la dirección que tenga el hijo. [LO MISMO PASA CON self-end]
+                · right= siempre alinearlos a la derecha.
+                · left= siempre alinearlos a la izquierda.
+                · baseline= sobre la linea de texto.
+                · first baseline= sobre la primera linea de texto.
+        
+        (SE VA CAMBIANDO DEPENDIENDO DE LA DIRECCIÓN DEL TEXTO, ES DECIR SIU ESTA DE IZQUIERDA A DERECHA o DERECHA A IZQUIERDA SE PONDRA EN UN LADO U OTRO)
+        */
+    justify-content: space-evenly; /*Movimos la graella, las celdas*/
+    /* direction: rtl; */
+    align-items: stretch; /*hace lo mismo que el justify-items pero de forma vertical*/
+    align-content: space-evenly;
+    height: 350px;
+    border: 2px solid #000;
+    margin: 20px;
+}
+
+.grid-item:first-child{
+    justify-self: center;
+    background-color: #e66;
+    align-self: stretch;
+}
+
+.grid-item{
+    background-color: #48e;
+    color: #fff;
+    font-size: 30px;
+    max-width: 100%;
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+        /* Con flex se podria alinear dentro de grid */
+    padding: 20px;
+}
+
+.grid-item:hover{
+    opacity: 0.74;
+}
