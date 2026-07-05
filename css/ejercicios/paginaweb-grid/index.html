@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header"> <!-- Creamos el header con la classe header-->
+        <input type="checkbox" class="header__checkbox" id="open-menu"> <!--Un input clase checkbox con un id.-->
+        <label for="open-menu" class="header__open-nav-button" role="button">=</label> <!-- Role button= Es decir para que servira este label para ayudar al apartado de accessibilidad para decir que es. Tambien conectaremos el label con el for al input y le pondremos una clase.-->
+        <div class="header__logo-container">
+            <img src="logo.webp" alt="" class="header__logo">   
+        </div>
+        <nav class="header__nav">
+            <ul class="header__nav-list">
+                <li class="header__nav-item"><a href="#">About</a></li>
+                <li class="header__nav-item"><a href="#">Portfolio</a></li>
+                <li class="header__nav-item"><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Lo que haremos en el header con el checkbox, es que lo quitaremos y con css haremos que cuando este activado pues se habra como un desplegable. -->
+</body>
+</html>

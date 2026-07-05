@@ -1,0 +1,86 @@
+*{
+    box-sizing: border-box;
+}
+
+/* Agarramos todos los elementos y le damos un box-sizing border-box */
+
+body{
+    font-family: sans-serif; /*Cambiamos la fuente*/
+    background-color: #e2eaff; /*Fondo azul/blanquete*/
+    color: #101632dd; /*Color Azul/negro*/
+}
+
+div,ul,nav,header,footer,a,li,label,body {
+    margin: 0;
+    padding: 0;
+}
+/* Quitamos todo el margen y padding, para evitar problemas mas adelante con estos elementos. */
+
+/* ---------- HEADER SECTION */
+
+.header{
+    background-color: #fff; /* Fondo blanco*/
+    display: flex; /*Flex, para alinear*/
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__open-nav-button{
+    color: #48e; /*Color al boton =*/
+    font-size: 3rem; /*para q crezca un poco*/
+    font-weight: 600; /*Para q se vea mas gordete*/
+    position: absolute; /*para q no estorbe/intervenga*/
+    right: 10px; /*Se pone en la derecha con el menu*/
+}
+
+.header__checkbox{
+    display: none;
+}
+/* Quitamos el cuadrado del checkbox */
+
+.header__nav{
+    display: none; /*Viene por defecto q no se vea*/
+    background-color: #fff;
+    position: absolute;
+    height: 100vh;
+    width: 100vh;
+    top: 0;
+    z-index: -1; /*Para q no este encima de¡l iheader*/
+}
+
+/* ---- LE PONEMOS TODOS LAS PROPIEDADES DE BASE ASI NO CONSUME MAS RECURSOS Y SOLO HAY Q CAMBIAR UN ELEMENTO CUANDO ESTE CHECKED. */
+
+.header__nav-list{
+    display: flex;
+    flex-direction: column;
+    height: 40vh;
+    margin: auto;
+    justify-content: space-evenly;
+}
+
+.header__checkbox:checked ~ .header__nav{
+    display: flex; /*Si le damos flex, despues podemos utilizar margin-auto dentro.*/
+}
+/* Cuando el input esta checkeado modificaremos al hermano utilizando (~) vamos a agarrar el .header__nav en display.*/
+
+.header__logo{
+    max-width: 100%; /*Para q ocupe toda la pantalla*/
+    width: 64px; /*para q tenga su tamaño*/
+    margin: 10px 20px; /*10px arriba, 20 por los lado*/
+}
+
+.header__nav-item{
+    list-style: none;
+}
+
+.header__nav-item a{
+    color: #48e;
+}
+
+.header__nav-item a:not(:is(:hover,:active)){ /*Cuando no se hace hover o no esta activo, no hay decoracion de texto.*/
+    text-decoration: none;
+}
+
+/* ---------- HEADER QUERIES -------- */
+
+/* ---------- HEADER ENDS -------- */
