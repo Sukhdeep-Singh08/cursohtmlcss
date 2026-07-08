@@ -113,6 +113,11 @@ div,ul,nav,header,footer,a,li,label,body {
 
 /* ---------- PROFILUE SECTION -------- */
 
+.profile{
+    container-name: profile;
+    container-type: inline-size;
+}
+
 .profile__wrapper{
     display: flex;
     flex-direction: column;
@@ -149,6 +154,7 @@ h1{
     margin: 10px;
     max-width: 600px;
     margin-left: 0;
+    align-items: center;
 }
 
 .load-bar{
