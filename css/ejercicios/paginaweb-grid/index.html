@@ -15,14 +15,14 @@
         </div>
         <nav class="header__nav">
             <ul class="header__nav-list">
-                <li class="header__nav-item"><a href="#">About</a></li>
-                <li class="header__nav-item"><a href="#">Portfolio</a></li>
-                <li class="header__nav-item"><a href="#">Contact</a></li>
+                <li class="header__nav-item"><a href="#profile">About</a></li>
+                <li class="header__nav-item"><a href="#portfolio">Portfolio</a></li>
+                <li class="header__nav-item"><a href="#form">Contact</a></li>
             </ul>
         </nav>
     </header>
     <!-- Lo que haremos en el header con el checkbox, es que lo quitaremos y con css haremos que cuando este activado pues se habra como un desplegable. -->
-    <main class="profile">
+    <main class="profile" id="profile">
         <div class="profile__wrapper">
             <div class="profile__img-container">
                 <img src="foto.jpg" alt="" class="profile__img">
@@ -66,7 +66,7 @@
             </div>
         </div>
     </main>
-    <section class="portfolio">
+    <section class="portfolio" id="portfolio">
         <h2 class="portfolio__h2">PORTFOLIO SECTION</h2>
         <div class="portfolio__project-container">
             <div class="portfolio__project">
@@ -89,5 +89,36 @@
             </div>
         </div>
     </section>
+    <section class="form" id="form">
+        <h2 class="form__title">CONTACT</h2>
+        <form class="form__form">
+            <div class="form__input-container">
+                <label> Nombre
+                    <input type="text" placeholder="John">
+                </label>
+            </div>
+            <div class="form__input-container">
+                <label> Apellidos
+                    <input type="text" placeholder="Dow">
+                </label>                
+            </div>
+            <div class="form__input-container">
+                <label> E-mail
+                    <input type="email" placeholder="yourmail@example.com">
+                </label>
+            </div>
+            <div class="form__input-container">
+                <label> Mensaje
+                    <textarea type="text" placeholder="Your message"></textarea>
+                </label>
+            </div>
+            <div class="form__input-container">
+                <input type="submit">
+            </div>
+        </form>
+    </section>
+    <footer>
+        <strong>ADA 13 </strong>- CopyRight
+    </footer>
 </body>
 </html>

@@ -1,5 +1,7 @@
 *{
     box-sizing: border-box;
+    scroll-behavior: smooth;
+    /* Es desplaçamiento es mas lento. (Mas suave) */
 }
 
 /* Agarramos todos los elementos y le damos un box-sizing border-box */
@@ -120,6 +122,7 @@ div,ul,nav,header,footer,a,li,label,body {
 .profile{
     container-name: profile;
     container-type: inline-size;
+    /* CREAMOS un contenedor */
 }
 
 .profile__wrapper{
@@ -182,7 +185,7 @@ h1{
     border-radius: 4px;
     padding: 4px 6px;
 }
-
+    /* Tamaño de las barras */
 .bar--80{
     width: 80%;
 }
@@ -214,7 +217,7 @@ h1{
         background-color: #fff;
         display: flex;
         align-items: center;
-        border-radius: 0px 25px 25px 0;
+        border-radius: 0px 25px 25px 0px;
         box-shadow: 0px 0px 9px #0002;
     }
 
@@ -230,7 +233,7 @@ h1{
     }
 
     .profile__img-container{
-        max-height: initial;
+        max-height: initial; /*Para q ocupe todo, es decir q se estire*/
         border-radius: 25px 0px 0px 25px;
     }
 
@@ -280,6 +283,7 @@ h1{
     /* ASIU SE CENTRA DENTRO DE GRID */
     display: grid;
     place-content: center;
+    border-radius: 12px;
 }
 
 .portfolio__project:hover{
@@ -320,3 +324,104 @@ h1{
 
 /* ---------- PORTAFOLIO ENDS -------- */
 
+
+/* ---------- CONTACT SECTION -------- */
+
+.form{
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0;
+    container-name: form;
+    container-type: inline-size;
+}
+
+.form__form{
+    padding: 12px;
+    max-width: 600px;
+    width: 100%;
+    /* Un maximo de 600px, pero ponemos un width 100% para que ocupe todo. */
+    display: grid;
+    margin-bottom: 30px;
+}
+
+.form__input-container :is(input,textarea) {
+    width: 100%;
+    padding: 9px;
+    font-size: 16px;
+    margin: 4px;
+    border: none;
+    box-shadow: 2px 2px 4px #0003;
+    background-color: #fffd;
+}
+
+.form__input-container textarea {
+    resize: none;
+    min-height: 120px;
+    font-family: inherit; /*Agarra la familia de arrriba*/
+}
+
+.form__input-container input[type="submit"]{
+    padding: 12px;
+    background-color: #48e;
+    color: #fff;
+}
+
+.form__tile{
+    font-size: 3rem;
+}
+
+/* ---------- CONTACT QUERIES -------- */
+
+@container form (min-width: 56.25rem) {
+    .form__form{
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+        "name lastname"
+        "email email"
+        "message message"
+        "button button"
+        ;
+        gap: 12px;
+        background-image: radial-gradient(#18233f06, #18233f33);
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0px 0px 40px #0006;
+    }
+
+    .form__input-container:first-child{
+        grid-area: name;
+    }
+
+    .form__input-container:nth-child(2){
+        grid-area: lastname;
+    }
+    .form__input-container:nth-child(3){
+        grid-area: email;
+    }
+    .form__input-container:nth-child(4){
+        grid-area: message;
+    }
+    .form__input-container:nth-child(5){
+        grid-area: button;
+    }
+
+    .form__input-container :is(input, textarea) {
+        box-shadow: none;
+        border-radius: 4px;
+    }
+}
+
+/* ---------- CONTACT ENDS -------- */
+
+/* ---------- FOOTER SECTION -------- */
+
+footer{
+    padding: 60px;
+    text-align: center;
+    background-color: #18233f;
+    color: #fffd;
+    font-size: 22px;
+}
