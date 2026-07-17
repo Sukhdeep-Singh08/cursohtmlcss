@@ -1,0 +1,35 @@
+body{
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #ccc;
+}
+
+div{
+    box-sizing: border-box;
+}
+
+.crecedor{
+    height: 100vh;
+}
+
+.box{
+    background-color: #48e;
+    padding: 20px;
+    animation: llenar-barra;
+    animation-timeline: view();
+        /* Si ponemos scroll, por ejemplo en esta barrra lo que pasaria es q se funcionaria antes de verse. Pero, si ponemos view pues se efectuara/ comenzara al verse nada mas. */
+}
+
+
+
+
+
+@keyframes llenar-barra{
+    from{
+        width: 0%;
+    }
+    to{
+        width: 100%;
+        background-color: red;
+    }
+}
