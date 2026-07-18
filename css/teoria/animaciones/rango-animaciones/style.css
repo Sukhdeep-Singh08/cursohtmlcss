@@ -13,20 +13,26 @@ div{
 }
 
 .box{
+    height: 400px;
     background-color: #48e;
     padding: 20px;
-    animation: llenar-barra;
+    animation: llenar-barra both;
     animation-timeline: view();
-        /* Si ponemos scroll, por ejemplo en esta barrra lo que pasaria es q se funcionaria antes de verse. Pero, si ponemos view pues se efectuara/ comenzara al verse nada mas. */
+    animation-range-start: cover 0%;
+    /* Tambien tenemos exit-crossing = cuando toca la el tope de la pantalla.
+    
+      contain = la caja esta completamente contenida. Se hace la animacion cuando se ve completamente la caja.
+    */
+    animation-range-end: contain 70%;
+        /* Lo q estamos haciendo que la animacion, que empiueze cuando en el viewport de la pantalla cubra un 20%. Para q no se vea raro como esta dentro de un div y normalmente estos tienen un 100% pues pondremos en animation: both para q empieze directamente chiquito y se vea bien */
 }
 
 
 @keyframes llenar-barra{
     from{
-        width: 0%;
+        opacity: 0;
     }
     to{
-        width: 100%;
-        background-color: red;
+        opacity: 1;
     }
 }
