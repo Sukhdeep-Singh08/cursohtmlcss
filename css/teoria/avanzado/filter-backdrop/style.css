@@ -1,0 +1,35 @@
+body{
+    margin: 0;
+    font-family: sans-serif;
+    height: 100vh;
+    display: flex;
+}
+
+.box{
+    margin: auto;
+    padding: 20px 50px;
+    filter: grayscale(2);
+    backdrop-filter: blur(10px);
+    border: 1px solid #000;
+        /* Aqui solo los efectos en el fondo */
+}
+
+/* 
+--------- FUNCIONES
+
+· url() Es una funciona a la cual ponemos una url y nos deberia cargar la img.
+
+· drop-shador Es una funcion de filtro que afectan efectos especiales como contraste, etc.
+
+· Filter: 
+    - blur() = Desenfocar [ Se suele utilizar rems o px ]
+    - brightness() = Luminosidad
+    - contrast() = Contraste
+    - grayscale() = Escala de gris convertir img o elementos a gris
+    - saturate() =  Saturación
+    - hue-rotate(30deg) = dependiendo de los grados q ponga se ira cambiando los colores.
+    - opacity() = Opacity
+    - invert() = Como el hue-rotate pero en la tabla de los invertidos
+    - sepia() = Color Sepia 
+[Si quieres añadir mas filtros, pones un espacio y vas poniendo mas y los filtros se siguen en orden.]
+*/
