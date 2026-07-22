@@ -1,4 +1,25 @@
 body{
     margin: 0;
     font-family: sans-serif;
+    height: 100vh;
+    display: flex;
+}
+
+.box{
+    margin: auto;
+    padding: 20px 50px;
+    border: 1px solid #000;
+    width: fit-content;
+    transform: rotate(15deg);
+        /*  Scale = Agranda el elemento 
+            scaleY() = Agrande verticalmente
+            scaleX() = Agrande horizontalmente
+            scale3d = Para mover un objeto 3d
+            skew() = es como si se puniese en cursiva la rota sin rotar si no en la misma linea. Los angulos se abren y se cierran a por ejempolo a lso grados q pongamos.
+            rotate() = Rota todo el cubos
+            translate() = Despaçar los elementos
+                Y = Verticalmente
+                X = Horizontalmente
+            
+        */
 }
