@@ -1,0 +1,37 @@
+body{
+    margin: 0;
+    font-family: sans-serif;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+.box{
+    background-color: #48e;
+    display: grid;
+    place-content: center;
+    font-size: 20px;
+    margin: 120px auto;
+    color: #fff;
+    padding: 0 40px;
+    width: clamp(800px, 100%, 1600px);
+    font-size: clamp(2.4rem,2.2vw,4rem);
+        /* Min , Ideal , Max 
+        
+            - Como minimo 800px, cuando puedas 100% y maximo 1600px
+            - Se utioiza y tambien se puede para tener letras flexibles.
+        */
+
+
+    /* width: min(600px, 100%); */
+        /* 
+        El min siempre agarra el mas pequeño. Que puede servir para daptar ppor ejemplo algun div para q se siga viendso completo
+        Basicamente con el max y el min, pues esta comparando con los valores que hemos puestos (Lo ideal 2) pero no se utilizan ninguno de los dos. 
+        */
+}
+
+h1 {
+    font-size: 2.2em;
+    margin-bottom: 0;
+}
