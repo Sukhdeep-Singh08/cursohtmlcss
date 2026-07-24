@@ -1,0 +1,58 @@
+ body{
+    margin: 0;
+    font-family: sans-serif;
+    /* --color-principal: #48e; */
+    --tamaño-principal: 2.4rem;
+}
+
+/* Si quieres q este en toda la pagina utilizar :root{}, para crear las variables.*/
+
+*{
+    box-sizing: border-box;
+}
+
+.box{
+    /* --color-principal: #f44; */
+        /* Para crear variables hay q poner dos "--" */
+
+    /* background-color: var(--color-principal); */
+        /* Para seleccionar la variable, ponemos var() y dentro ponemos la variable que acabamos de crear. */
+    display: grid;
+    place-content: center;
+    font-size: 20px;
+    margin: 120px auto;
+    color: #fff;
+    padding: 0 40px;
+    width: clamp(800px, 100%, 1600px);
+    font-size: clamp(var(--tamaño-principal),2.2vw,4rem);
+    border: 6px solid black  ;
+}
+
+.box:first-child{
+    background-color: var(--color-principal);
+}
+
+
+.box:nth-child(2){
+    color: var(--color-principal);
+}
+
+h1 {
+    font-size: 2.2em;
+    margin-bottom: 0;
+}
+
+body > p {
+    color: var(--color-principal);
+    font-size: 60px;
+}
+
+/* La variable que tenemos solo va existir dentro de box, ya que creamos la variable ahi. */
+
+@property --color-principal{
+    syntax: "<color>";
+    inherits: false;
+    initial-value: #48e;
+}
+
+    /* Es una forma para crear propias personalizacions */
