@@ -1,0 +1,35 @@
+*{
+    box-sizing: border-box;
+}
+
+:root {
+    --color-principal: #48e;
+    --alto-del-box: 200px;
+}
+
+body{
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.box{
+    font-size: 30px;
+    padding: 0 40px;
+    font-size: clamp(2.4rem,2.2vw,4rem);
+    border: 6px solid black;
+    /* width: calc(100% - 200px); */
+        /* Se puede sumar, restar, dividir y multiplicar */
+}
+
+.box:first-child{
+    height: var(--alto-del-box);
+}
+
+.box:nth-child(2){
+    height: calc(100vh - var(--alto-del-box));
+        /* Siempre q tiene q haber un espacio en + y -  */
+    overflow: auto;
+}
+
+
+/* Se usa para restar la parte de una caja para q la otra se adapte en la pantalla.*/
