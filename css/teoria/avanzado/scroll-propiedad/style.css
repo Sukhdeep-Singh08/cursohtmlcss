@@ -1,0 +1,27 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.box {
+    font-size: 30px;
+    padding: 0 40px;
+    border: 6px solid #000;
+    width: 50vw;
+    height: 100vh;
+    overflow: scroll;
+    scroll-behavior: smooth;
+        /* Si poonemos smooth cambia la velocidad de la barra, para que se vea como mas suave. Si es de enlace a enlace. */
+    scrollbar-color: #48e #fff;
+        /* Necessitamos dos colores uno pal scroll-bar y otra para el fondo. */
+    scrollbar-width: auto;
+        /* Tiene tres valores = None, auto y thin para cambiar el tamaño. */
+}
+
+.crecer{
+    height: 200vh;
+}
