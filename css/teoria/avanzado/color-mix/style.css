@@ -1,0 +1,19 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+    width: 100%;
+    overflow: hidden;
+}
+
+.box {
+    font-size: 30px;
+    width: fit-content;
+    padding: 320px;
+    background-color: color-mix(in srgb, #f44 50%, white 20%);
+    /* color-mix(in srgb, color percentage, color percentage); */
+        /* Para reducir la opacidad sin q se adapte al fondo. */
+}

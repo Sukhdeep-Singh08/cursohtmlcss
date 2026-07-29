@@ -1,0 +1,22 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+    width: 100%;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+img {
+    max-width: 100%;
+    clip-path: circle(30% at 60% 60%);
+        /* circle (30% at 60% 60%)
+            ellipse(30% H 50% V at 50% 50%)
+        */
+
+        /* Lo mejor es ir a un generador de clip-path y hacerlo desde ahi. */
+    border: 10px solid #f44;
+}
