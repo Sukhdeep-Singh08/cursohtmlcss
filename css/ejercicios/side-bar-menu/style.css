@@ -1,0 +1,60 @@
+* {
+    box-sizing: border-box;
+        /* Para que las medidas no se salgan */
+}
+
+body, div, ul, li, a, h1, h2, h3, h4{
+    margin: 0;
+    padding: 0;
+        /* Quitamos margenes, padding a los elementos seleccionados. */
+}
+
+body{
+    --bg-color: color-mix(in srgb, #f62 70%, #fff);
+        /* Utilizamos la propiedad color mix para decir en q tipo de colores o de metodo, ponemos el color el porcentaje de visibilidad y el blanco. */
+    --sidebar-color: #fff;
+    --dark-color: #f62;
+    background-color: var(--bg-color);
+        /* Creamos variables, para facilitar a la hora de cambiarlos no ir uno por uno. */
+}
+
+/* SIDEBAR STYLUES */
+
+.sidebar {
+    background-color: var(--sidebar-color);
+    position: fixed;
+        /* Se fija en la pantalla en la parte izquierda */
+    height: 100dvh;
+        /* utilizamos el dynamic viewport height, que es el que se adapta. */
+    width: clamp(220px, 20vw, 300px);
+        /* Clamp minimo 220px, lo ideal 20 viewport width y lo maximo que podra crecer son 300px. */
+    font-size: clamp(1rem, 2.2vw, 3rem);
+        /* Aqui en vez del tamaño hacemos que crezca hasta 3 rem y minimo 1 rem. */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px 0 30px 6px;
+        /* arriba, derecha, abajo y izquierda. */
+}
+
+.sidebar__nav{
+    flex: 1;
+    display: flex;
+}
+
+.sidebar__nav ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.sidebar__item{
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar__form{
+    position: absolute;
+    display: none;
+}
