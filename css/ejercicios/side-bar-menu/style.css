@@ -9,11 +9,17 @@ body, div, ul, li, a, h1, h2, h3, h4{
         /* Quitamos margenes, padding a los elementos seleccionados. */
 }
 
+label, .sidebar__nav{
+    user-select: none;
+        /* Que el usuario no podra seleccionar = no fondo azul al seleccionar. */
+}
+
 body{
     --bg-color: color-mix(in srgb, #f62 70%, #fff);
         /* Utilizamos la propiedad color mix para decir en q tipo de colores o de metodo, ponemos el color el porcentaje de visibilidad y el blanco. */
     --sidebar-color: #fff;
     --dark-color: #f62;
+    --text-color: #444;
     background-color: var(--bg-color);
         /* Creamos variables, para facilitar a la hora de cambiarlos no ir uno por uno. */
     font-family: sans-serif;
@@ -89,20 +95,125 @@ body{
     right: 0;
     width: 18px;
     height: 18px;
+    background-color: transparent;
 }
 
 .sidebar__item:hover:before{
-    top: -10px;
+    top: -18px;
+    border-bottom-right-radius: 25px;
+    box-shadow: 4px 4px 0 4px var(--bg-color);
+        /* Horizontal, Vertical, Difuminado y Tamaño */
+}
+
+.sidebar__item:hover::after{
+    bottom: -18px;
+    border-top-right-radius: 25px;
+    box-shadow: 4px -4px 0 4px var(--bg-color);
+}
+
+/* SIDEBAR PICTURE STYLES */
+
+.sidebar__picture {
+    margin-left: 1.5rem;
+    position: relative;
+    z-index: 10;
+}
+
+.sidebar__picture img{
+    width: clamp(4rem, 75%, 20rem);
+    margin: auto;
+    opacity: .82;
+        /* En este caso hace cambiar el color del naranja a uno mas clarito */
+    filter: hue-rotate(-22deg);
+
+        /* LO MEJOR ES NO CAMBIAR EL COLOR DEL LEGO, PERO EN ESTE CASO LO HACEMOS PArA QUE COMBINE CON EL FONDO, ETC. */
+}
+
+/* SIDEBAR MENU PROFILE STYLUE */
+
+.sidebar__profile img{
+    border-radius: 50%;
+    width: 2rem;
+}
+
+.item--profile .profile-option{
+    font-size: .8rem;
+    padding: 0 12px 0 9px;
+    color: inherit;
+}
+
+.item--profile{
+    margin: 12px;
+    width: fit-content;
+        /* Que el tamaño de la caja se adapte al contenido */
+}
+
+.item--profile:hover{
+    border-radius: 25px;
+    color: var(--sidebar-color);
+}
+
+.item--profile:hover img{
+    opacity: .7;
+}
+
+.item--profile::before, .item--profile::after{
+    display: none;
+        /* Quitamos la casilla */
+    
+}
+
+input[type="checkbox"]{ /*Agarramos el input con el tipo checkbox*/
+    display: none;
+}
+
+.sidebar__form{
+    position: absolute;
+    z-index: 20;
+    right: -1rem;
+}
+
+.sidebar label{
+    position: relative;
+        /* Ponemos posicion relativa ya q trabajaremos con before y after. */
+    color: var(--sidebar-color);
+    background-color: var(--bg-color);
+    font-size: 2rem;
+    border-radius: 50%;
+    padding: .4rem;
+}
+
+.sidebar label::before,
+.sidebar label::after{
+    content: '';
+    background-color: var(--bg-color);
+    position: absolute;
+    width: 10px;
+    height: 25px;
+    background-color: transparent;
+}
+
+.sidebar label::before {
+    top: -25px;
+    left: 19px;
     border-bottom-right-radius: 25px;
     box-shadow: 4px 4px 0 4px var(--bg-color);
 }
 
-.sidebar__item:hover::after{
-
+.sidebar label::after {
+    bottom: -25px;
+    left: 19px;
+    border-top-right-radius: 25px;
+    box-shadow: 4px -4px 0 4px var(--bg-color);
 }
 
+input[type="checkbox"]:checked ~ label {
+    color: var(--bg-color);
+    background-color: var(--sidebar-color);
+}
 
-.sidebar__form{
-    position: absolute;
+input[type="checkbox"]:checked ~ label::after,
+input[type="checkbox"]:checked ~ label::before{
     display: none;
 }
+
