@@ -42,6 +42,7 @@ body{
     justify-content: space-between;
     padding: 30px 0 30px 6px;
         /* arriba, derecha, abajo y izquierda. */
+    transition: width .4s ease-in-out, max-width .4s ease-in-out;
 }
 
 .sidebar__nav{
@@ -171,6 +172,11 @@ input[type="checkbox"]{ /*Agarramos el input con el tipo checkbox*/
     position: absolute;
     z-index: 20;
     right: -1rem;
+
+}
+
+.sidebar__form .open-button{
+    display: none;
 }
 
 .sidebar label{
@@ -217,3 +223,37 @@ input[type="checkbox"]:checked ~ label::before{
     display: none;
 }
 
+.sidebar:has(input[type="checkbox"]:checked) {
+    /* Si el sidebar tiene un input de tipo checkbox checked */
+    width: 4%;
+}
+
+.sidebar:has(input[type="checkbox"]:checked) .sidebar__form label{
+    display: none;
+}
+
+.sidebar:has(input[type="checkbox"]:checked)  .sidebar__form .open-button{
+    display: block;
+}
+
+.sidebar:has(input[type="checkbox"]:checked)  .sidebar__form{
+    top: 4.8rem;
+    width: fit-content;
+}
+
+.sidebar:has(input[type="checkbox"]:checked) .sidebar__picture img{
+    max-width: 3.4rem;
+}
+
+.sidebar:has(input[type="checkbox"]:checked) .sidebar__picture{
+    margin-left: 0;
+}
+
+.sidebar:has(input[type="checkbox"]:checked) picture{
+    width: fit-content;
+    margin-left: .75rem;
+}
+
+.sidebar:has(input[type="checkbox"]:checked) :is(.sidebar__item a, .profile-option){
+    display: none;
+}
