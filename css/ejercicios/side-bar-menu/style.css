@@ -42,7 +42,7 @@ body{
     justify-content: space-between;
     padding: 30px 0 30px 6px;
         /* arriba, derecha, abajo y izquierda. */
-    transition: width .4s ease-in-out;
+    transition: width .3s ease-in-out;
 }
 
 .sidebar__nav{
@@ -121,12 +121,12 @@ body{
 }
 
 .sidebar__picture img{
-    width: clamp(4rem, 75%, 20rem);
+    max-width: clamp(4rem, 75%, 20rem);
     margin: auto;
     opacity: .82;
         /* En este caso hace cambiar el color del naranja a uno mas clarito */
     filter: hue-rotate(-22deg);
-    transition: width .4s ease-in-out;
+    transition: max-width .4s ease-in-out;
         /* LO MEJOR ES NO CAMBIAR EL COLOR DEL LEGO, PERO EN ESTE CASO LO HACEMOS PArA QUE COMBINE CON EL FONDO, ETC. */
 }
 
@@ -161,7 +161,6 @@ body{
 .item--profile::before, .item--profile::after{
     display: none;
         /* Quitamos la casilla */
-    
 }
 
 input[type="checkbox"]{ /*Agarramos el input con el tipo checkbox*/
@@ -172,7 +171,6 @@ input[type="checkbox"]{ /*Agarramos el input con el tipo checkbox*/
     position: absolute;
     z-index: 20;
     right: -1rem;
-
 }
 
 .sidebar__form .open-button{
@@ -196,7 +194,7 @@ input[type="checkbox"]{ /*Agarramos el input con el tipo checkbox*/
     position: absolute;
     width: 10px;
     height: 25px;
-    background-color: transparent;
+    background-color: transparent;  
 }
 
 .sidebar label::before {
@@ -225,7 +223,7 @@ input[type="checkbox"]:checked ~ label::before{
 
 .sidebar:has(input[type="checkbox"]:checked) {
     /* Si el sidebar tiene un input de tipo checkbox checked */
-    width: 4%;
+    width: 80px;
 }
 
 .sidebar:has(input[type="checkbox"]:checked) .sidebar__form label{
@@ -242,7 +240,7 @@ input[type="checkbox"]:checked ~ label::before{
 }
 
 .sidebar:has(input[type="checkbox"]:checked) .sidebar__picture img{
-    width: 3.4rem;
+    max-width: 3.4rem;
 }
 
 .sidebar:has(input[type="checkbox"]:checked) .sidebar__picture{
