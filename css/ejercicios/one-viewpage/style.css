@@ -5,12 +5,102 @@
 body {
     font-family: sans-serif;
     --bg-color: #FF9464;
-    --chat-bg-color: #fff;
-    --dark-color: #f62;
-    background-color: var(--bg-color);
+    --chat-bg-color: #333;
+    --dark-color: rgb(182, 40, 40);
 }
 
 body,div,ul,li,a,h1,h2,h3,h4, p {
     margin: 0;
     padding: 0;
+}
+
+body{
+    background-image: url(img/fondo.gif);
+    background-position: center;
+    background-size: cover;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    mix-blend-mode: difference;
+}
+
+.text-container {
+   min-height: 100vh;
+   position: fixed;
+   top: 0; 
+   display: flex;
+   font-size: clamp(1rem, 9vw, 12rem);
+   color: var(--chat-bg-color);
+   font-weight: 600;
+   justify-content: space-between;
+   width: 100%;
+   align-items: center;
+   padding: 2vw;
+   mix-blend-mode: difference;
+   animation: aparecer-texto both;
+   animation-timeline: scroll();
+   animation-range-start: cover 20%;
+}
+
+.left-text{
+    color: var(--dark-color);
+    padding-left: 4vw;
+}
+
+.right-text{
+    font-weight: 900px;
+}
+
+.left-text{
+    filter: drop-shadow(0px 0px 1px var(--dark-color)) drop-shadow(0px 0px 9px var(--dark-color));
+}
+
+
+img {
+    filter: grayscale();
+    mix-blend-mode: darken;
+        /* Combina los colores y siempre resulta en más iluminación. (Combina la luz de ambas capas, lo contrario al multiply) */
+        /* Darken: Compara pixeles y se queda con el más oscuro. Lo contrario con el screen q se queda con los claros. */
+    position: fixed;
+    top: 0;
+    animation: aparecer both;
+    animation-timeline: scroll();
+    max-height: 100vh;
+}
+
+@keyframes aparecer{
+    0%{
+        opacity: 0;
+        filter: grayscale();
+        translate: 0 -20%;
+        scale: .7;
+    }
+    100% {
+        opacity: 1;
+        filter: grayscale();
+        translate: 0 0;
+        scale: 1;
+    }
+}
+
+
+@keyframes aparecer-texto{
+    0%{
+        opacity: 0;
+        translate: 0 20%;
+        scale: 2;
+    }
+    100% {
+        opacity: 1;
+        translate: 0 0;
+        scale: 1;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .text-container{
+        justify-content: space-evenly;
+    }
 }
