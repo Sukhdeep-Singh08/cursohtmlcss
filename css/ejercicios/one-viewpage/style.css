@@ -99,3 +99,9 @@ img {
         scale: 1;
     }
 }
+
+@media screen and (max-width: 900px) {
+    .text-container{
+        justify-content: space-evenly;
+    }
+}
