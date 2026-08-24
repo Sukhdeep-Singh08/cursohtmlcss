@@ -28,19 +28,19 @@ body {
     margin: 7px;
     padding: 7px;
     max-height: 34px;
-    transition: max-height 1.5s;
     overflow: hidden;
     display: block;
+    transition: max-height .5s;
 }
 
-.faq__option:has(input[type="checkbox"]):checked {
-    max-height: 150px;
+.faq__option:has(input[type="checkbox"]:checked) {
+    max-height: 200px;
+    transition: max-height 1.5s;
 }
 
-.faq__option:has(input[type="checkbox"]):checked .content {
-    animation: aparecer 1s  both;
+.faq__option:has(input[type="checkbox"]:checked) .content {
+    animation: aparecer 1s both;
 }
-
 
 .content {
     padding: 5px 10px;
@@ -72,7 +72,7 @@ input[type="checkbox"] {
     display: none;
 }
 
-.faq__option:has(input[type="checkbox"]):checked .faq__ask::before {
+.faq__option:has(input[type="checkbox"]:checked) .faq__ask::before {
     content: '-';
 }
 
